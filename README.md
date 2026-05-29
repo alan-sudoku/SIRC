@@ -19,7 +19,7 @@ Four constraints on what a transmission must preserve to count as communication 
 
 | File | Role |
 | :--- | :--- |
-| `SIRC_principles.md` | The Protocol Constraints — $\mathsf{P1}$–$\mathsf{P4}$ with proofs, open questions, and scope conditions. The positive channel: what survives audit. |
+| `SIRC_principles.md` | The Protocol Constraints — $\mathsf{P1}\text{–}\mathsf{P4}$ with proofs, open questions, and scope conditions. The positive channel: what survives audit. |
 | `SIRC_principles_retraction.md` | The retraction log — every claim probed and found absent. The negative channel: what was shed. |
 | `SIRC_principles_audit_prompt.md` | Adversarial audit prompt — structured attacks for an AI auditor to run against the principles. |
 | `SIRC_glossary.md` | Notation reference — $C_-$ / $C_+$ (abstract) vs. $\mathcal{J}^-$ / $\mathcal{J}^+$ (concrete state sets); not interchangeable. |
@@ -44,7 +44,7 @@ Reading both halves is optional. Reading only the positive channel is reading a 
 
 ## Reading order
 
-**Start here:** `SIRC_principles.md` — read the Preamble first, then $\mathsf{P1}$–$\mathsf{P4}$ in sequence. The Preamble explains why four independent fields are required and why $\mathsf{P2}$ is pedagogically first but not logically prior.
+**Start here:** `SIRC_principles.md` — read the Preamble first, then $\mathsf{P1}\text{–}\mathsf{P4}$ in sequence. The Preamble explains why four independent fields are required and why $\mathsf{P2}$ is pedagogically first but not logically prior.
 
 **Notation questions:** `SIRC_glossary.md` — the $C_-$ / $\mathcal{J}^-$ distinction matters before reading any experiment document.
 

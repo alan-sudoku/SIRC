@@ -402,7 +402,7 @@ Precision additions made in Passes 8–9 are recorded here to prevent misreading
 | "The target was **shifted** from Uniqueness to $\mathsf{P1}$-Equivalence" | Pass 8 — rejected critique (Infinite Grid): the uniqueness requirement was never in $\mathsf{P1}$ or $\mathsf{P3}$ | The uniqueness framing appeared in a draft OQ3.1 addition and was corrected before application. The document's core claim was always $\mathsf{P1}$-equivalence. The "shift" was a correction to draft language, not a change to any principle. |
 | "Reinventing the Wheel resolved by citing groundings (Shannon, Kolmogorov, Mac Lane, McGuire)" | Pass 1 — rejected critique: citations always present; defense was rejection, not document revision | No document change was made in response to the reinvention charge. Those citations existed before any audit pass. The defense is recorded in the rejected critiques table (Rev 0, Rev 1: "Dead end as unified mathematical theory — applies only if method-level pointers are read as foundational claims"). |
 
-**Implication for future audit:** The $\mathsf{P1}$–$\mathsf{P4}$ statements are unchanged from Pass 4 onward. Passes 5–9 produced clarifications, precision additions, and pointer repairs — no structural changes to any principle. An auditor finding the Pass 9 final summary and treating it as the audit history will have a wrong model of the document's provenance. This record is the correction.
+**Implication for future audit:** The $\mathsf{P1}\text{–}\mathsf{P4}$ statements are unchanged from Pass 4 onward. Passes 5–9 produced clarifications, precision additions, and pointer repairs — no structural changes to any principle. An auditor finding the Pass 9 final summary and treating it as the audit history will have a wrong model of the document's provenance. This record is the correction.
 
 ---
 
@@ -692,7 +692,7 @@ The protocol's claim — that entailment relations can be transmitted as constra
 
 ### Exploration value
 
-The rename demonstrates the R10 pattern at protocol-name level: the most load-bearing term in a framework's identity is also the most exposed attack surface. "Semantic" was carrying the full weight of the protocol's identity claim while simultaneously admitting five non-equivalent reconstructions. Replacing it with a term that is operationally defined by the protocol's own content (reasoning = entailment-relation structure, as specified in $\mathsf{P1}$–$\mathsf{P4}$) removes the attack surface entirely. Future documents extending or applying SIRC should apply the same test to any term borrowed from a contested tradition: if the term's definition is disputed outside the protocol, use SIRC-native vocabulary instead.
+The rename demonstrates the R10 pattern at protocol-name level: the most load-bearing term in a framework's identity is also the most exposed attack surface. "Semantic" was carrying the full weight of the protocol's identity claim while simultaneously admitting five non-equivalent reconstructions. Replacing it with a term that is operationally defined by the protocol's own content (reasoning = entailment-relation structure, as specified in $\mathsf{P1}\text{–}\mathsf{P4}$) removes the attack surface entirely. Future documents extending or applying SIRC should apply the same test to any term borrowed from a contested tradition: if the term's definition is disputed outside the protocol, use SIRC-native vocabulary instead.
 
 ---
 

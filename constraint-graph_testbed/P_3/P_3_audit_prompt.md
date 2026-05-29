@@ -26,7 +26,7 @@ The audit must respect these layers. A Part III section that says "this is a can
 
 **Assemble inputs:**
 
-1. **$\mathsf{P1}$–$\mathsf{P4}$ Principles** — paste the full text of `SIRC_principles.md` (two levels up: `../../SIRC_principles.md`). This is the compliance standard. Do not summarize it.
+1. **$\mathsf{P1}\text{–}\mathsf{P4}$ Principles** — paste the full text of `SIRC_principles.md` (two levels up: `../../SIRC_principles.md`). This is the compliance standard. Do not summarize it.
 2. **Section context** — three sub-inputs, assembled as follows:
    - **Input 2.1 — Previous sections:** paste all sections preceding the target section verbatim. *Required for Pass 3 (redundancy check) and Pass 4 (symmetry check). May be omitted for Pass 1 and Pass 2 only.*
    - **Input 2.2 — Target section:** paste the target section verbatim. Required for all passes.

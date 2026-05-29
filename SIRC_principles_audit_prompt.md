@@ -108,7 +108,7 @@ Evaluate the falsifiability conditions introduced in OQ1.4 and OQ3.1 as a linked
 - **What needs to be built first?** Identify the Level 0 dependency — the thing that must exist before anything else can be tested.
 - **How far are we from producible results?** Give a realistic maturity assessment.
 **5. Minimum Sufficient Constraint Packet**
-For each section ($\text{P1}$–$\text{P4}$): compress the section into a minimum sufficient constraint packet targeting two sentences. This compression must meet two criteria: (1) it could serve as a preamble — a receiver reading it before the full section should be correctly oriented for reconstruction; (2) it functions as a human take-away — portable and self-contained without the full section. Where these two criteria conflict, state why.
+For each section ($\text{P1}\text{–}\text{P4}$): compress the section into a minimum sufficient constraint packet targeting two sentences. This compression must meet two criteria: (1) it could serve as a preamble — a receiver reading it before the full section should be correctly oriented for reconstruction; (2) it functions as a human take-away — portable and self-contained without the full section. Where these two criteria conflict, state why.
 
 ---
 

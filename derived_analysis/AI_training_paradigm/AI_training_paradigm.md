@@ -4,13 +4,13 @@
 
 | Section | Claim |
 | :--- | :--- |
-| §1 — Structural diagnosis | The current AI paradigm does not target $\mathsf{P1}$–$\mathsf{P4}$ compliance; each principle identifies a precise point of divergence. |
-| §2 — Model collapse mechanism | Model collapse is mechanistically explained by $\mathsf{P1}$–$\mathsf{P4}$: structural invariant degradation precedes and drives surface form degradation. |
+| §1 — Structural diagnosis | The current AI paradigm does not target $\mathsf{P1}\text{–}\mathsf{P4}$ compliance; each principle identifies a precise point of divergence. |
+| §2 — Model collapse mechanism | Model collapse is mechanistically explained by $\mathsf{P1}\text{–}\mathsf{P4}$: structural invariant degradation precedes and drives surface form degradation. |
 | §3 — Current mitigations | No current approach achieves $\mathsf{P1}$ compliance for general reasoning; all optimise proxies of the invariant, not the invariant itself. |
 | §4 — $\mathsf{P1}$-compliant training | $\mathsf{P1}$-compliant training requires three independent structural changes; none requires the others to be solved first. |
 | §5 — Falsifiable predictions | The SIRC account generates predictions that differ from the standard model collapse account and are independently testable. Prediction 5 is testable now with the verifier toolset. |
 
-**Dependency on principles:** All claims trace to [SIRC Principles](../../SIRC_principles.md) §$\mathsf{P1}$–§$\mathsf{P4}$. No new principles are introduced. Claims not derivable from $\mathsf{P1}$–$\mathsf{P4}$ are marked *Conjecture*.
+**Dependency on principles:** All claims trace to [SIRC Principles](../../SIRC_principles.md) §$\mathsf{P1}$–§$\mathsf{P4}$. No new principles are introduced. Claims not derivable from $\mathsf{P1}\text{–}\mathsf{P4}$ are marked *Conjecture*.
 
 **External reference:** Model collapse as an established phenomenon — Shumailov et al. (2023), "The Curse of Recursion."
 
@@ -18,11 +18,11 @@
 
 ## Status and scope
 
-This document applies the four SIRC principles ($\mathsf{P1}$–$\mathsf{P4}$) to the current AI training paradigm as a diagnostic framework. It does not introduce new principles or extend existing ones. Every claim traces back to a specific principle or is labeled with its epistemic status.
+This document applies the four SIRC principles ($\mathsf{P1}\text{–}\mathsf{P4}$) to the current AI training paradigm as a diagnostic framework. It does not introduce new principles or extend existing ones. Every claim traces back to a specific principle or is labeled with its epistemic status.
 
 **Epistemic markers:**
-- `*(D) Derived*` — follows from $\mathsf{P1}$–$\mathsf{P4}$ by logical consequence
-- `*(C) Conjecture*` — consistent with $\mathsf{P1}$–$\mathsf{P4}$, not yet demonstrated empirically
+- `*(D) Derived*` — follows from $\mathsf{P1}\text{–}\mathsf{P4}$ by logical consequence
+- `*(C) Conjecture*` — consistent with $\mathsf{P1}\text{–}\mathsf{P4}$, not yet demonstrated empirically
 - `*(E) Established*` — supported by prior literature independently of SIRC
 
 ---
@@ -70,7 +70,7 @@ As training progresses, the model drifts toward the low-constraint end of the $\
 **Step 5 — $\mathsf{P2}$ compounds across generations.** *(D)*
 Each synthetic training generation introduces loss. The student trained on generation $N$ has less structural invariant signal than the teacher. The student becomes the teacher for generation $N+1$. $\mathsf{P2}$ applied as a recurrence: the loss compounds. The distribution does not merely narrow — it structurally degrades. Surface form is preserved longer than structural coherence because surface form is what the reward signal maintains.
 
-*(Steps 1–3 and 5 are derived from $\mathsf{P1}$–$\mathsf{P4}$. Step 4 is the only conjecture in the chain.)*
+*(Steps 1–3 and 5 are derived from $\mathsf{P1}\text{–}\mathsf{P4}$. Step 4 is the only conjecture in the chain.)*
 
 ```mermaid
 flowchart TD

@@ -15,7 +15,7 @@
 ---
 
 
-## Preamble — $\mathsf{P1}$–$\mathsf{P4}$ are non-derivable, application-coupled, and scope-bounded
+## Preamble — $\mathsf{P1}\text{–}\mathsf{P4}$ are non-derivable, application-coupled, and scope-bounded
 
 ### Pedagogical sequence — $\mathsf{P2}$ motivates $\mathsf{P1}$
 
@@ -56,7 +56,7 @@ None of these produce a certificate. They produce *consensus*. Consensus among A
 | Generalisation across puzzle families | Conjecture | Requires Tower of Hanoi, Latin square, DAG experiments |
 | Synthesis claims in §P1–P4 | Audited conjecture | Consistent under multi-model audit; no certificate available |
 
-A synthesis claim in §$\mathsf{P1}$–$\mathsf{P4}$ that survives audit but has no grounding in the experimental programme remains an audited conjecture. A synthesis claim that is confirmed by enumerable results across multiple puzzle families is an empirically supported claim — still not a formal proof, but qualitatively different from consensus alone.
+A synthesis claim in §$\mathsf{P1}\text{–}\mathsf{P4}$ that survives audit but has no grounding in the experimental programme remains an audited conjecture. A synthesis claim that is confirmed by enumerable results across multiple puzzle families is an empirically supported claim — still not a formal proof, but qualitatively different from consensus alone.
 
 **Self-referential note:** SIRC principles claims that reasoning transmission between substrates has structural properties ($\mathsf{P3}$, $\mathsf{P4}$). The audit process that produced and maintains this document is itself a reasoning transmission between AI substrates. The document cannot escape its own scope condition: the audit loop is inside the system being described, not outside it. The puzzle experiments are the only part of the programme that operates outside this loop — the verifier produces results independently of what any AI substrate believes about them.
 

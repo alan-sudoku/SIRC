@@ -69,8 +69,8 @@
 | $\mathcal{R}$ | Predation rules — the constraint packet transmitted to the receiver. Distinct from $\mathcal{J}^-$: the rules are what is transmitted; $\mathcal{J}^-$ is what they generate. Relationship: $\mathcal{J}^- = \{ s \in \mathcal{S} \mid \mathcal{R}(s) = \text{invalid} \}$ | §2 |
 | $\mathcal{J}^-$ | Invalid states — configurations excluded by applying $\mathcal{R}$ to $\mathcal{S}$ | §3 |
 | $\mathcal{J}^+$ | Valid states — $\mathcal{S} \setminus \mathcal{J}^-$; the state space the receiver reconstructs | §4 |
-| $S_n$ | Individual state node — $S_1$ is the start state $(L,L,L,L)$; $S_{10}$ is the goal state $(R,R,R,R)$; $S_2$–$S_9$ are intermediate valid states. Full enumeration in §4. | §4 |
-| $e_n$ | Individual transition edge — labelled by what the Farmer carries ($e_1$–$e_{10}$). Full enumeration in §5. | §5 |
+| $S_n$ | Individual state node — $S_1$ is the start state $(L,L,L,L)$; $S_{10}$ is the goal state $(R,R,R,R)$; $S_2\text{–}S_9$ are intermediate valid states. Full enumeration in §4. | §4 |
+| $e_n$ | Individual transition edge — labelled by what the Farmer carries ($e_1\text{–}e_{10}$). Full enumeration in §5. | §5 |
 | $\mathcal{G}_T$ | Transition graph — the undirected graph on $\mathcal{J}^+$ where nodes are valid states and edges are legal Farmer moves. Bidirectional: every edge can be traversed in either direction (the puzzle is physically reversible). Distinct from the constraint graph ($P_3$) — see scope note below table. | §5 |
 | $P_n$ | Path graph on $n$ nodes — $P_3$ has $3$ nodes and $2$ edges; $P_4$ has $4$ nodes and $3$ edges. The constraint graph is a $P_n$ when the predation rules form a linear chain with no branching. | §2 |
 | $L_{\min}$ | Minimum solution length in moves | §5 |
@@ -161,7 +161,7 @@ flowchart LR
 
 **Precision note — vertex cover vs. minimum sufficient boundary:**
 
-The graph-theoretic literature on river crossing puzzles (Schwartz 1961; Csorba-Hurkens-Woeginger 2008) defines the **minimum vertex cover** $\tau(G)$ as the minimum set of items that must always stay under the *Farmer*'s control to guarantee the unattended bank is safe. For the $P_3$ path ($W$–$G$–$C$), $\tau(P_3) = 1$: the *Goat* alone covers both edges. This yields the Alcuin number result: the minimum boat capacity is $\tau(G)$ or $\tau(G)+1$ — for $P_3$, $\tau(P_3) = 1$, so $1$ or $2$ items beyond the *Farmer*.
+The graph-theoretic literature on river crossing puzzles (Schwartz 1961; Csorba-Hurkens-Woeginger 2008) defines the **minimum vertex cover** $\tau(G)$ as the minimum set of items that must always stay under the *Farmer*'s control to guarantee the unattended bank is safe. For the $P_3$ path ($W\text{–}G	ext{–}C$), $\tau(P_3) = 1$: the *Goat* alone covers both edges. This yields the Alcuin number result: the minimum boat capacity is $\tau(G)$ or $\tau(G)+1$ — for $P_3$, $\tau(P_3) = 1$, so $1$ or $2$ items beyond the *Farmer*.
 
 The minimum vertex cover and the $P_3$ minimum sufficient boundary measure different things from the same constraint graph:
 
@@ -445,8 +445,8 @@ For three transported objects, the possible constraint graphs are:
 | Constraint graph | Structure | Puzzle property |
 |---|---|---|
 | No edges | No unsafe pairs | Trivially solvable. $L_{\min}=5$, $N_{paths}=6$. No strategy required — any carry order works. |
-| One edge (e.g. $W$–$G$ only) | One unsafe pair | Solvable. $L_{\min}=5$, $N_{paths}=2$. One safe parking spot; minimal constraint. |
-| **Path $P_3$ ($W$–$G$–$C$)** | **Two pairs sharing one node** | **Non-trivially solvable. $L_{\min}=7$, $N_{paths}=2$. Forces a key insight. Minimum complexity with a solution.** |
+| One edge (e.g. $W\text{–}G$ only) | One unsafe pair | Solvable. $L_{\min}=5$, $N_{paths}=2$. One safe parking spot; minimal constraint. |
+| **Path $P_3$ ($W\text{–}G	ext{–}C$)** | **Two pairs sharing one node** | **Non-trivially solvable. $L_{\min}=7$, $N_{paths}=2$. Forces a key insight. Minimum complexity with a solution.** |
 | Triangle $K_3$ (all pairs unsafe) | All pairs dangerous | Unsolvable. $N_{paths}=0$ (UNSAT — Z3 certificate). No safe intermediate state exists. |
 
 $P_3$ is the unique 3-node constraint graph that is simultaneously solvable and non-trivially solvable. Remove one edge: $L_{\min}$ drops from $7$ to $5$ and the forced bottleneck strategy disappears — solvable but trivial. Add one edge (completing $K_3$): unsolvable (UNSAT). The constraint structure sits at the exact boundary between tractable-trivial and tractable-non-trivial.
@@ -522,7 +522,7 @@ The river crossing puzzle uses a $P_3$ constraint graph — the minimum structur
 
 Add one object to the chain: Fox–Chicken–Caterpillar–Leaf. The predation rules are: *Fox* eats *Chicken*; *Chicken* eats *Caterpillar*; *Caterpillar* eats *Leaf*. The constraint graph is a $P_4$ path — three pair-exclusion rules, with *Chicken* and *Caterpillar* as the two bottleneck nodes.
 
-| Property | $P_3$ ($W$–$G$–$C$) | $P_4$ (Fox–Chicken–Caterpillar–Leaf) |
+| Property | $P_3$ ($W\text{–}G	ext{–}C$) | $P_4$ (Fox–Chicken–Caterpillar–Leaf) |
 |---|---|---|
 | Constraint graph | $P_3$ ($2$ edges, $3$ nodes) | $P_4$ ($3$ edges, $4$ nodes) |
 | Minimum rules $\lvert \mathcal{R} \rvert$ | $2$ | $3$ |
