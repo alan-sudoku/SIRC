@@ -70,7 +70,7 @@ As training progresses, the model drifts toward the low-constraint end of the $\
 **Step 5 — $\mathsf{P2}$ compounds across generations.** *(D)*
 Each synthetic training generation introduces loss. The student trained on generation $N$ has less structural invariant signal than the teacher. The student becomes the teacher for generation $N+1$. $\mathsf{P2}$ applied as a recurrence: the loss compounds. The distribution does not merely narrow — it structurally degrades. Surface form is preserved longer than structural coherence because surface form is what the reward signal maintains.
 
-*(Steps 1–3 and 5 are derived from $\mathsf{P1}\text{–}\mathsf{P4}$. Step 4 is the only conjecture in the chain.)*
+(Steps 1–3 and 5 are derived from $\mathsf{P1}\text{–}\mathsf{P4}$. Step 4 is the only conjecture in the chain.)
 
 ```mermaid
 flowchart TD
@@ -157,7 +157,7 @@ Consumer queries in natural language are $\mathsf{P3}$ non-compliant — they tr
 
 This is the most tractable near-term direction. It does not require solving OQ1.2 — it requires a pre-processing layer that extracts structural constraints from natural language. The model's structural reasoning layer then operates on constraint inputs rather than raw surface-form inputs, isolating it from the $\mathsf{P1}$ non-compliant signal at the query boundary.
 
-*No implementation of this exists. The extraction mechanism is the open problem.*
+*No general-purpose implementation of this exists. Domain-specific pipelines (NL-to-SQL, NL-to-SMT) approximate this for narrow formal domains; the extraction mechanism for general reasoning is the open problem.*
 
 ---
 
