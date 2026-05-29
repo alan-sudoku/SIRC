@@ -27,7 +27,7 @@ Every retracted claim, overclaimed scope, and removed research pointer. The log 
 | [§R5](#r5) | $\mathsf{P4}$ inverse coupling held unconditionally | §$\mathsf{P4}$ Definition | 2026-04-08 | Pass 1 — Gemini Rev 0 |
 | [§R6](#r6) | Braid group pointer retained after algebraic incompatibility named | §$\mathsf{P1}$ OQ1.1 pointer | 2026-04-08 | Pass 2 — Gemini Rev 1 |
 | [§R7](#r7) | Rate-Distortion Theory labeled as research pointer | §$\mathsf{P2}$ Grounding pointer | 2026-04-08 | Pass 2 — Gemini Rev 1 |
-| [§R8](#r8) | "Mathematically independent" language for $\mathsf{P1}$/$\mathsf{P2}$ | Preamble pedagogical sequence | 2026-04-08 | Pass 3 — Gemini Rev 2 |
+| [§R8](#r8) | "Mathematically independent" language for $\mathsf{P1}$ / $\mathsf{P2}$ | Preamble pedagogical sequence | 2026-04-08 | Pass 3 — Gemini Rev 2 |
 | [§R9](#r9) | "Irreducible (engineering definition)" defense paragraph | Preamble | 2026-04-08 | Pass 3 — superseded by R10 |
 | [§R10](#r10) | "Irreducible Principles" title and language throughout | Title, headers, preamble | 2026-04-08 | Pass 4 — defensive restructure |
 | [§A1](#a1) | Node Identity ambiguity: "what entails it" read as edge-adjacency | §$\mathsf{P1}$ Node Identity | 2026-04-09 | Pass 5 — Gemini attack on entailment vs. isomorphism |
@@ -262,7 +262,7 @@ The structural analogy is real and identifies the correct formalization target. 
 
 ## §R8
 
-**Description:** "Mathematically independent" language for $\mathsf{P1}$/$\mathsf{P2}$ coupling
+**Description:** "Mathematically independent" language for $\mathsf{P1}$ / $\mathsf{P2}$ coupling
 **Source:** Preamble — pedagogical sequence paragraph
 **Date:** 2026-04-08
 **Retraction trigger:** Pass 3 — Gemini Revision 2 audit
@@ -358,7 +358,7 @@ Gemini critiques assessed and rejected across all four audit passes. Recorded he
 | $\mathsf{P1}$→$\mathsf{P2}$ logical derivation dependency | Rev 2 | Conflates application-level coupling with logical derivation. DPI is provable without any consequence relation. The consequence relation is provable without any information channel. Non-derivability and shared application vocabulary are compatible. |
 | Dead end as unified mathematical theory | Rev 0, Rev 1 | Applied only if method-level pointers are read as foundational claims. The document explicitly states originality is in the application, not the mathematics. |
 | Motte-and-Bailey fallacy | Rev 2 | Misclassified. Motte-and-Bailey requires strategic shifting between positions under pressure. The document's body stated the same position throughout. The valid kernel — title/body presentation gap — was addressed by R10 (term removal), not by shifting position. |
-| $\mathsf{P1}$/$\mathsf{P2}$ are requirements not mechanics; document is top-heavy | Rev 3 | Fair typological observation about role differentiation; not a structural attack. $\mathsf{P1}$ and $\mathsf{P2}$ are prescriptive constraints that close off design alternatives (full fidelity, structural isomorphism), not merely descriptive requirements. Accepted as a documentation note, not a retraction trigger. |
+| $\mathsf{P1}$ / $\mathsf{P2}$ are requirements not mechanics; document is top-heavy | Rev 3 | Fair typological observation about role differentiation; not a structural attack. $\mathsf{P1}$ and $\mathsf{P2}$ are prescriptive constraints that close off design alternatives (full fidelity, structural isomorphism), not merely descriptive requirements. Accepted as a documentation note, not a retraction trigger. |
 | Node Identity secretly forces isomorphism ("back door" attack) | Pass 5 | Conflates dependency path with inferential role. If $A \vdash B$ holds in both structures, $B$'s position in the entailment map is unchanged regardless of intermediate step $C$. Attack lands on a genuine ambiguity in exposition (C1); the underlying claim is correct. |
 | Inferential role is an unverifiable projection onto neural substrates | Pass 5 | This is OQ1.2, already open. The attack addresses a claim the document does not make. Principles define the invariant mathematically; extractability is deferred as an empirical question. |
 | $\mathsf{P3}$ forces the sender to provide intermediate steps (isomorphic structure) to be tractable | Pass 5 | Correct observation about the design space; misfires as a $\mathsf{P1}$ contradiction. This is $\mathsf{P4}$ operating correctly — the sender may choose a higher point on the trade-off curve, approaching fuller specification. That is a design choice, not a collapse of entailment equivalence. |

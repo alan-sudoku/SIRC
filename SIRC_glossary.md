@@ -11,7 +11,7 @@ Two notations are in use across the SIRC document set. They are **not interchang
 | Notation | Level | Where used | Meaning |
 |:---|:---|:---|:---|
 | $C_-$, $C_+$ (subscript) | Abstract / concept-level | `SIRC_principles.md` | Concept structure: $C_-$ is the negative boundary the sender encodes; $C_+$ is the invariant content the receiver reconstructs. Applies to all SIRC transmissions. |
-| $\mathcal{J}^-$, $\mathcal{J}^+$ (superscript, mathcal J) | Concrete / state-set | testbed documents | Enumerated sets: $\mathcal{J}^-$ is the retracted state set (states ruled out by applying constraint rules to the state space); $\mathcal{J}^+$ is the complement set of valid states. Applies only to finite puzzle testbeds. $\mathcal{J}$ is used specifically to avoid collision with the abstract $C_-$/$C_+$ notation and has no established meaning in the fields SIRC spans. |
+| $\mathcal{J}^-$, $\mathcal{J}^+$ (superscript, mathcal J) | Concrete / state-set | testbed documents | Enumerated sets: $\mathcal{J}^-$ is the retracted state set (states ruled out by applying constraint rules to the state space); $\mathcal{J}^+$ is the complement set of valid states. Applies only to finite puzzle testbeds. $\mathcal{J}$ is used specifically to avoid collision with the abstract $C_-$ / $C_+$ notation and has no established meaning in the fields SIRC spans. |
 
 Source: `SIRC_principles.md` §$\mathsf{P3}$ (abstract channel usage) and the constraint-graph experiment documents (concrete state-set usage).
 

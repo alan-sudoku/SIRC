@@ -22,7 +22,7 @@ Four constraints on what a transmission must preserve to count as communication 
 | `SIRC_principles.md` | The Protocol Constraints — $\mathsf{P1}$–$\mathsf{P4}$ with proofs, open questions, and scope conditions. The positive channel: what survives audit. |
 | `SIRC_principles_retraction.md` | The retraction log — every claim probed and found absent. The negative channel: what was shed. |
 | `SIRC_principles_audit_prompt.md` | Adversarial audit prompt — structured attacks for an AI auditor to run against the principles. |
-| `SIRC_glossary.md` | Notation reference — $C_-$/$C_+$ (abstract) vs. $\mathcal{J}^-$/$\mathcal{J}^+$ (concrete state sets); not interchangeable. |
+| `SIRC_glossary.md` | Notation reference — $C_-$ / $C_+$ (abstract) vs. $\mathcal{J}^-$ / $\mathcal{J}^+$ (concrete state sets); not interchangeable. |
 | `constraint-graph_testbed/P_3/P_3_river_crossing.md` | First experiment — uses the Wolf–Goat–Cabbage river crossing puzzle to make $\mathsf{P1}$'s node identity clause concrete. |
 | `constraint-graph_testbed/P_3/P_3_audit_prompt.md` | Section-by-section audit prompt for the P_3 experiment document. |
 | `constraint-graph_testbed/constraint-graph_testbed_retraction.md` | Retraction log for the experiment series. |
@@ -44,7 +44,7 @@ Reading both halves is optional. Reading only the positive channel is reading a 
 
 ## Reading order
 
-**Start here:** `SIRC_principles.md` — read the Preamble first, then $\mathsf{P1}$ – $\mathsf{P4}$ in sequence. The Preamble explains why four independent fields are required and why $\mathsf{P2}$ is pedagogically first but not logically prior.
+**Start here:** `SIRC_principles.md` — read the Preamble first, then $\mathsf{P1}$–$\mathsf{P4}$ in sequence. The Preamble explains why four independent fields are required and why $\mathsf{P2}$ is pedagogically first but not logically prior.
 
 **Notation questions:** `SIRC_glossary.md` — the $C_-$ / $\mathcal{J}^-$ distinction matters before reading any experiment document.
 
@@ -60,7 +60,7 @@ Reading both halves is optional. Reading only the positive channel is reading a 
 Start at $\mathsf{P1}$'s typed DAG definition and OQ1.1 (minimal vs. non-minimal dependency structure). $\mathsf{P3}$'s constraint packet is the engineering claim — what a sender must transmit for the receiver to reconstruct within bounds. $\mathsf{P4}$'s asymmetry theorem is where the protocol touches computational complexity. If reading the experiment documents: check `SIRC_glossary.md` first — the $C_-$ / $\mathcal{J}^-$ distinction matters.
 
 **Formal logician / type theorist:**
-$\mathsf{P1}$'s entailment equivalence criterion is the load-bearing definition. OQ1.4 (inference-system dependence) is the known gap. The typed DAG operator requirement (AND, OR, NOT and equivalents) is the scope condition — read the Substrate scope subsection in the Preamble before evaluating the universality claim. If reading the experiment documents: check `SIRC_glossary.md` first — the $C_-$/$\mathcal{J}^-$ distinction matters.
+$\mathsf{P1}$'s entailment equivalence criterion is the load-bearing definition. OQ1.4 (inference-system dependence) is the known gap. The typed DAG operator requirement (AND, OR, NOT and equivalents) is the scope condition — read the Substrate scope subsection in the Preamble before evaluating the universality claim. If reading the experiment documents: check `SIRC_glossary.md` first — the $C_-$ / $\mathcal{J}^-$ distinction matters.
 
 **General reader (no technical background):**
 Use this prompt with an AI and `SIRC_principles.md` attached:
@@ -82,4 +82,4 @@ The argument structure audit tools used to develop and maintain these documents 
 
 Working documents. No institutional affiliation. Version history is in the document headers (`SIRC_principles.md` is at v3.07).
 
-The most productive external input at this stage: adversarial audits of $\mathsf{P1}$'s node identity criterion (OQ1.1 and OQ1.4) and assessment of whether $\mathsf{P3}$'s constraint graph analysis correctly identifies the SIRC-relevant object.
+The most productive external input at this stage: adversarial audits of $\mathsf{P1}$'s node identity criterion (OQ1.1 and OQ1.4) and assessment of whether $P_3$ River Crossing's constraint graph analysis correctly identifies the SIRC-relevant object.
