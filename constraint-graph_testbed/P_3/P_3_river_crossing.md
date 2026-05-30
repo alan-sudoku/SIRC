@@ -173,7 +173,7 @@ The minimum vertex cover and the $P_3$ minimum sufficient boundary measure diffe
 | $\tau(G)$ — minimum vertex cover | Items the agent must always control | $1$ (Goat) | $2$ (Chicken, Caterpillar) | $\lfloor n/2 \rfloor$ |
 | $P_3$ minimum sufficient boundary | Rules in the constraint packet | $2$ | $3$ | $n-1$ |
 
-These grow at different rates. The Alcuin number result ($\tau(G) \le \operatorname{Alcuin}(G) \le \tau(G)+1$) is a **boat-capacity theorem** — it sets the agent's minimum capacity requirement. The $P_3$ minimum boundary result is a **rule-count theorem** — it sets the minimum constraint packet size. Conflating these produces a category error: agent capacity and rule count are independent properties of the same constraint graph.
+These grow at different rates. The Alcuin number result ($`\tau(G) \le \operatorname{Alcuin}(G) \le \tau(G)+1`$) is a **boat-capacity theorem** — it sets the agent's minimum capacity requirement. The $P_3$ minimum boundary result is a **rule-count theorem** — it sets the minimum constraint packet size. Conflating these produces a category error: agent capacity and rule count are independent properties of the same constraint graph.
 
 **Terminological precision:** What the constraint-graph documents call "bottleneck nodes" corresponds precisely to the minimum vertex cover of the conflict graph. For $P_3$, the vertex cover is {Goat}; for $P_4$, {Chicken, Caterpillar}. A bottleneck node is formally a node whose removal from the vertex cover leaves an uncovered edge — i.e., an unsafe pair with no managed item.
 
