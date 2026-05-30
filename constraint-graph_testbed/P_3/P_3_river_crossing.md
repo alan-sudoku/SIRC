@@ -273,10 +273,10 @@ flowchart LR
 *Green nodes/edges: shared trunk (both paths). Blue: Path A (*Cabbage* second). Orange: Path B (*Wolf* second). The branching and reconvergence pattern is addressed in §6.*
 
 **Path A** (*Cabbage* second):
-$S_1 \xrightarrow{G} S_6 \xrightarrow{\emptyset} S_3 \xrightarrow{C} S_7 \xrightarrow{G} S_2 \xrightarrow{W} S_8 \xrightarrow{\emptyset} S_5 \xrightarrow{G} S_{10}$
+$S_1$ $\xrightarrow{G}$ $S_6$ $\xrightarrow{\emptyset}$ $S_3$ $\xrightarrow{C}$ $S_7$ $\xrightarrow{G}$ $S_2$ $\xrightarrow{W}$ $S_8$ $\xrightarrow{\emptyset}$ $S_5$ $\xrightarrow{G}$ $S_{10}$
 
 **Path B** (*Wolf* second):
-$S_1 \xrightarrow{G} S_6 \xrightarrow{\emptyset} S_3 \xrightarrow{W} S_9 \xrightarrow{G} S_4 \xrightarrow{C} S_8 \xrightarrow{\emptyset} S_5 \xrightarrow{G} S_{10}$
+$S_1$ $\xrightarrow{G}$ $S_6$ $\xrightarrow{\emptyset}$ $S_3$ $\xrightarrow{W}$ $S_9$ $\xrightarrow{G}$ $S_4$ $\xrightarrow{C}$ $S_8$ $\xrightarrow{\emptyset}$ $S_5$ $\xrightarrow{G}$ $S_{10}$
 
 Both paths have length $7$ (moves). Both pass through $S_1, S_6, S_3, S_8, S_5, S_{10}$. They diverge at $S_3$ and reconverge at $S_8$.
 
