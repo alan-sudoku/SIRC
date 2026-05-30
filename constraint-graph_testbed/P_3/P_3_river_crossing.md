@@ -526,7 +526,7 @@ The river crossing puzzle uses a $P_3$ constraint graph — the minimum structur
 
 Add one object to the chain: Fox–Chicken–Caterpillar–Leaf. The predation rules are: *Fox* eats *Chicken*; *Chicken* eats *Caterpillar*; *Caterpillar* eats *Leaf*. The constraint graph is a $P_4$ path — three pair-exclusion rules, with *Chicken* and *Caterpillar* as the two bottleneck nodes.
 
-| Property | $P_3$ ($W\text{–}G	ext{–}C$) | $P_4$ (Fox–Chicken–Caterpillar–Leaf) |
+| Property | $P_3$ ( $W\text{–}G	ext{–}C$) | $P_4$ (Fox–Chicken–Caterpillar–Leaf) |
 |---|---|---|
 | Constraint graph | $P_3$ ($2$ edges, $3$ nodes) | $P_4$ ($3$ edges, $4$ nodes) |
 | Minimum rules $\lvert \mathcal{R} \rvert$ | $2$ | $3$ |
