@@ -1,8 +1,8 @@
 # Constraint-Graph Testbed — $P_3$ River Crossing
 
 **Status:** Active exploration — not theory, not principles. Claims here are candidates for later promotion or retraction.
-**Purpose: Use the Wolf-Goat-Cabbage river crossing puzzle to make concrete the constraint-graph construction rules that $\mathsf{P1}$'s node identity clause implies. The state-space of this puzzle is a bidirectional transition graph (not a DAG); the constraint structure over predation relations is a directed $P_3$ path (a DAG). This document analyses both, but the SIRC-relevant object is the constraint graph. If the puzzle can be fully described as a SIRC constraint packet, that tells us something about what general constraint-graph construction requires.
-Companion document:** `P_4_river_crossing.md` *(forthcoming)* — extends this analysis to a $P_4$ constraint graph (Fox–Chicken–Caterpillar–Leaf). Results here are the baseline all $\mathsf{P4}$ claims are compared against.
+**Purpose:** Use the Wolf-Goat-Cabbage river crossing puzzle to make concrete the constraint-graph construction rules that $\mathsf{P1}$'s node identity clause implies. The state-space of this puzzle is a bidirectional transition graph (not a DAG); the constraint structure over predation relations is a directed $P_3$ path (a DAG). This document analyses both, but the SIRC-relevant object is the constraint graph. If the puzzle can be fully described as a SIRC constraint packet, that tells us something about what general constraint-graph construction requires.
+**Companion document:** `P_4_river_crossing.md` *(forthcoming)* — extends this analysis to a $P_4$ constraint graph (Fox–Chicken–Caterpillar–Leaf). Results here are the baseline all $\mathsf{P4}$ claims are compared against.
 
 **Methods applied:**
 
@@ -65,13 +65,13 @@ Companion document:** `P_4_river_crossing.md` *(forthcoming)* — extends this a
 
 | Symbol | Meaning | Defined |
 | :--- | :--- | :--- |
-| $\mathcal{S}$ | Full state space — all $2^4 = 16$ configurations$(F, W, G, C)$ | §2 |
-| $\mathcal{R}$ | Predation rules — the constraint packet transmitted to the receiver. Distinct from $\mathcal{J}^- $: the rules are what is transmitted; $\mathcal{J}^-$ is what they generate. Relationship: $\mathcal{J}^- = \{ s \in \mathcal{S} \mid \mathcal{R}(s) = \text{invalid} \}$ | §2 |
+| $\mathcal{S}$ | Full state space — all $2^4 = 16$ configurations $(F, W, G, C)$ | §2 |
+| $\mathcal{R}$ | Predation rules — the constraint packet transmitted to the receiver. Distinct from $\mathcal{J}^-$: the rules are what is transmitted; $\mathcal{J}^-$ is what they generate. Relationship: $\mathcal{J}^- = \{ s \in \mathcal{S} \mid \mathcal{R}(s) = \text{invalid} \}$ | §2 |
 | $\mathcal{J}^-$ | Invalid states — configurations excluded by applying $\mathcal{R}$ to $\mathcal{S}$ | §3 |
-| $\mathcal{J}^+$ | Valid states — $\mathcal{S} \setminus \mathcal{J}^- $; the state space the receiver reconstructs | §4 |
-| $S_n$ | Individual state node — $S_1$ is the start state$(L,L,L,L) $; $S_{10}$ is the goal state$(R,R,R,R) $; $S_2\text{–}S_9$ are intermediate valid states. Full enumeration in §4. | §4 |
-| $e_n$ | Individual transition edge — labelled by what the Farmer carries ( $e_1\text{–}e_{10}$). Full enumeration in §5. | §5 |
-| $\mathcal{G}_T$ | Transition graph — the undirected graph on $\mathcal{J}^+$ where nodes are valid states and edges are legal Farmer moves. Bidirectional: every edge can be traversed in either direction (the puzzle is physically reversible). Distinct from the constraint graph ( $P_3$) — see scope note below table. | §5 |
+| $\mathcal{J}^+$ | Valid states — $\mathcal{S} \setminus \mathcal{J}^-$; the state space the receiver reconstructs | §4 |
+| $S_n$ | Individual state node — $S_1$ is the start state $(L,L,L,L)$; $S_{10}$ is the goal state $(R,R,R,R)$; $S_2\text{–}S_9$ are intermediate valid states. Full enumeration in §4. | §4 |
+| $e_n$ | Individual transition edge — labelled by what the Farmer carries ($e_1\text{–}e_{10}$). Full enumeration in §5. | §5 |
+| $\mathcal{G}_T$ | Transition graph — the undirected graph on $\mathcal{J}^+$ where nodes are valid states and edges are legal Farmer moves. Bidirectional: every edge can be traversed in either direction (the puzzle is physically reversible). Distinct from the constraint graph ($P_3$) — see scope note below table. | §5 |
 | $P_n$ | Path graph on $n$ nodes — $P_3$ has $3$ nodes and $2$ edges; $P_4$ has $4$ nodes and $3$ edges. The constraint graph is a $P_n$ when the predation rules form a linear chain with no branching. | §2 |
 | $L_{\min}$ | Minimum solution length in moves | §5 |
 | $N_{paths}$ | Number of distinct solution paths from $S_1$ to $S_{10}$ | §5 |
@@ -79,7 +79,7 @@ Companion document:** `P_4_river_crossing.md` *(forthcoming)* — extends this a
 | $B_{unattended}$ | Set of objects on the bank where the Farmer is not present. Used to state the predation rules as formal set-inclusion constraints: $\neg\{X,Y\} \subseteq B_{unattended}$ means $X$ and $Y$ cannot both occupy the unattended bank. Applies identically in all river crossing variants. | §2 |
 | $\mathsf{P1}$, $\mathsf{P3}$, $\mathsf{P4}$ | SIRC Principles — P1 (Invariance), P3 (Constraint Packet), P4 (Work). Referenced in §9–11. Full definitions in [SIRC_principles.md](../../SIRC_principles.md). | §9–11 |
 
-*Two graphs in this document:* $\mathcal{G}_T$ (transition graph, §5) is the state-space object — bidirectional, contains cycles. The constraint graph ( $P_3$, §2) is the predation-relation object — directed, acyclic. Conflating these two graphs is a typological error. However, separating them does not make the constraint graph a P1 object: its edges are predation relations ("eats"), not entailment relations ( $\vdash$). The constraint graph is $\mathcal{R}$ — P3's object, the constraint packet. P1 contact in this document comes through inferential role identification (§12.3), not through the constraint graph's edges.
+*Two graphs in this document:* $\mathcal{G}_T$ (transition graph, §5) is the state-space object — bidirectional, contains cycles. The constraint graph ($P_3$, §2) is the predation-relation object — directed, acyclic. Conflating these two graphs is a typological error. However, separating them does not make the constraint graph a P1 object: its edges are predation relations ("eats"), not entailment relations ($\vdash$). The constraint graph is $\mathcal{R}$ — P3's object, the constraint packet. P1 contact in this document comes through inferential role identification (§12.3), not through the constraint graph's edges.
 
 ---
 
@@ -101,45 +101,45 @@ The river crossing puzzle has a complete, enumerable state space. Every valid st
 
 ### §2. Formal encoding
 
-**Four objects:** Farmer ( $F$), Wolf ( $W$), Goat ( $G$), Cabbage ( $C$). Each object is on either bank: $L$ (left, start) or $R$ (right, goal).
-**State Space: $\mathcal{S} = \{ (F, W, G, C) \mid F, W, G, C \in \{L, R\} \}$, where$|\mathcal{S}| = 2^4 = 16$.
+**Four objects:** Farmer ($F$), Wolf ($W$), Goat ($G$), Cabbage ($C$). Each object is on either bank: $L$ (left, start) or $R$ (right, goal).
+**State Space:** $\mathcal{S} = \{ (F, W, G, C) \mid F, W, G, C \in \{L, R\} \}$, where $|\mathcal{S}| = 2^4 = 16$.
 
-Move rule:** *Farmer* must move on every turn (to the opposite bank). *Farmer* may bring at most one other object. *Farmer* can only bring an object that is on his current bank.
+**Move rule:** *Farmer* must move on every turn (to the opposite bank). *Farmer* may bring at most one other object. *Farmer* can only bring an object that is on his current bank.
 
 **Move rule (formal):** Let $\bar{b}$ denote the opposite of bank $b$. A transition from state $s$ to state $s'$ is legal if and only if:
 
-$ $F_{s'} = \overline{F_s}$$
+$$F_{s'} = \overline{F_s}$$
 
 and exactly one of:
 
 - **Farmer moves alone:** $\forall o \in \{W,G,C\},\; o_{s'} = o_s$
-- **Farmer carries $x$: $\exists x \in \{o \in \{W,G,C\} \mid o_s = F_s\}$ such that $x_{s'} = \overline{x_s}$ and $\forall o \in \{W,G,C\},\; o \neq x \Rightarrow o_{s'} = o_s$
+- **Farmer carries $x$:** $\exists x \in \{o \in \{W,G,C\} \mid o_s = F_s\}$ such that $x_{s'} = \overline{x_s}$ and $\forall o \in \{W,G,C\},\; o \neq x \Rightarrow o_{s'} = o_s$
 
-In words: the Farmer always crosses; in the carry case, exactly one object on the Farmer's current bank crosses with him; all other objects stay. This transition function, applied to $\mathcal{J}^+ $, generates the edge set of the transition graph — independently derivable from the notation without the §5 edge table.
+In words: the Farmer always crosses; in the carry case, exactly one object on the Farmer's current bank crosses with him; all other objects stay. This transition function, applied to $\mathcal{J}^+$, generates the edge set of the transition graph — independently derivable from the notation without the §5 edge table.
 
-Internal consistency protocol: The four formal elements below (state space, move rule, constraint packet, set relationships) are the complete specification of the puzzle. A reader or auditor can verify §3–§5 independently:
+**Internal consistency protocol:** The four formal elements below (state space, move rule, constraint packet, set relationships) are the complete specification of the puzzle. A reader or auditor can verify §3–§5 independently:
 - Apply $\mathcal{R}$ to all $2^4 = 16$ states in $\mathcal{S}$ → must produce exactly the §3 invalid-state enumeration.
 - $\mathcal{J}^+ = \mathcal{S} \setminus \mathcal{J}^-$ → must match the §4 valid-state list exactly.
 - Apply the move rule (transition condition above) to all states in $\mathcal{J}^+$ → must produce exactly the §5 edge table.
 
 Any mismatch is a document inconsistency. Resolve by correcting §2, then re-deriving the downstream tables — not the reverse.
 
-Safety Rules (Constraint Packet $\mathcal{R}$):**
+**Safety Rules (Constraint Packet $\mathcal{R}$):**
 Let $B_{unattended}$ be the set of objects on the bank where $F$ is not present.
 - $\neg \{W, G\} \subseteq B_{unattended}$
 - $\neg \{G, C\} \subseteq B_{unattended}$
 
 On any bank where the *Farmer* is **not** present:
-- *Wolf* and *Goat* cannot coexist. ( $W$ eats $G$)
-- *Goat* and *Cabbage* cannot coexist. ( $G$ eats $C$)
+- *Wolf* and *Goat* cannot coexist. ($W$ eats $G$)
+- *Goat* and *Cabbage* cannot coexist. ($G$ eats $C$)
 
-These two rules are the **constraint packet $\mathcal{R}$ — the minimum sufficient set of boundary conditions. The relationship between the three sets is:
+These two rules are the **constraint packet** $\mathcal{R}$ — the minimum sufficient set of boundary conditions. The relationship between the three sets is:
 
-$ $\mathcal{J}^- = \{ s \in \mathcal{S} \mid \mathcal{R}(s) = \text{invalid} \}, \qquad \mathcal{J}^+ = \mathcal{S} \setminus \mathcal{J}^-$$
+$$\mathcal{J}^- = \{ s \in \mathcal{S} \mid \mathcal{R}(s) = \text{invalid} \}, \qquad \mathcal{J}^+ = \mathcal{S} \setminus \mathcal{J}^-$$
 
 $\mathcal{R}$ is what is transmitted; $\mathcal{J}^-$ is what it generates; $\mathcal{J}^+$ is what the receiver reconstructs.
 
-The constraint graph:**
+**The constraint graph:**
 
 ```mermaid
 flowchart LR
@@ -161,7 +161,7 @@ flowchart LR
 
 **Precision note — vertex cover vs. minimum sufficient boundary:**
 
-The graph-theoretic literature on river crossing puzzles (Schwartz 1961; Csorba-Hurkens-Woeginger 2008) defines the **minimum vertex cover** $\tau(G)$ as the minimum set of items that must always stay under the *Farmer*'s control to guarantee the unattended bank is safe. For the $P_3$ path ( $W\text{–}G	ext{–}C$), $\tau(P_3) = 1$: the *Goat* alone covers both edges. This yields the Alcuin number result: the minimum boat capacity is $\tau(G)$ or $\tau(G)+1$ — for $P_3$, $\tau(P_3) = 1$, so $1$ or $2$ items beyond the *Farmer*.
+The graph-theoretic literature on river crossing puzzles (Schwartz 1961; Csorba-Hurkens-Woeginger 2008) defines the **minimum vertex cover** $\tau(G)$ as the minimum set of items that must always stay under the *Farmer*'s control to guarantee the unattended bank is safe. For the $P_3$ path ($W\text{–}G	ext{–}C$), $\tau(P_3) = 1$: the *Goat* alone covers both edges. This yields the Alcuin number result: the minimum boat capacity is $\tau(G)$ or $\tau(G)+1$ — for $P_3$, $\tau(P_3) = 1$, so $1$ or $2$ items beyond the *Farmer*.
 
 The minimum vertex cover and the $P_3$ minimum sufficient boundary measure different things from the same constraint graph:
 
@@ -170,9 +170,9 @@ The minimum vertex cover and the $P_3$ minimum sufficient boundary measure diffe
 | $\tau(G)$ — minimum vertex cover | Items the agent must always control | $1$ (Goat) | $2$ (Chicken, Caterpillar) | $\lfloor n/2 \rfloor$ |
 | $P_3$ minimum sufficient boundary | Rules in the constraint packet | $2$ | $3$ | $n-1$ |
 
-These grow at different rates. The Alcuin number result ( $\tau(G) \leq \operatorname{Alcuin}(G) \leq \tau(G)+1$) is a **boat-capacity theorem** — it sets the agent's minimum capacity requirement. The $P_3$ minimum boundary result is a **rule-count theorem** — it sets the minimum constraint packet size. Conflating these produces a category error: agent capacity and rule count are independent properties of the same constraint graph.
+These grow at different rates. The Alcuin number result ($\tau(G) \leq \operatorname{Alcuin}(G) \leq \tau(G)+1$) is a **boat-capacity theorem** — it sets the agent's minimum capacity requirement. The $P_3$ minimum boundary result is a **rule-count theorem** — it sets the minimum constraint packet size. Conflating these produces a category error: agent capacity and rule count are independent properties of the same constraint graph.
 
-**Terminological precision: What the constraint-graph documents call "bottleneck nodes" corresponds precisely to the minimum vertex cover of the conflict graph. For $P_3$, the vertex cover is {Goat}; for $P_4$, {Chicken, Caterpillar}. A bottleneck node is formally a node whose removal from the vertex cover leaves an uncovered edge — i.e., an unsafe pair with no managed item.
+**Terminological precision:** What the constraint-graph documents call "bottleneck nodes" corresponds precisely to the minimum vertex cover of the conflict graph. For $P_3$, the vertex cover is {Goat}; for $P_4$, {Chicken, Caterpillar}. A bottleneck node is formally a node whose removal from the vertex cover leaves an uncovered edge — i.e., an unsafe pair with no managed item.
 
 ---
 
@@ -180,7 +180,7 @@ These grow at different rates. The Alcuin number result ( $\tau(G) \leq \operato
 
 Applying the safety rule: six of the sixteen states are invalid.
 
-| State$(F,W,G,C)$ | Unattended bank | Why invalid |
+| State $(F,W,G,C)$ | Unattended bank | Why invalid |
 | :--- | :--- | :--- |
 | $(R,L,L,L)$ | Left: $\{W,G,C\}$ | $\{W,G\}$ and $\{G,C\}$ both present |
 | $(R,L,L,R)$ | Left: $\{W,G\}$ | $\{W,G\}$ present |
@@ -189,13 +189,13 @@ Applying the safety rule: six of the sixteen states are invalid.
 | $(L,L,R,R)$ | Right: $\{G,C\}$ | $\{G,C\}$ present |
 | $(L,R,R,R)$ | Right: $\{W,G,C\}$ | $\{W,G\}$ and $\{G,C\}$ both present |
 
-Observation:** A receiver who knows only the two predation rules — without being told which states are valid — can derive the full valid state space by exclusion. What this means for SIRC$\mathsf{P3}$ is addressed in §10.
+**Observation:** A receiver who knows only the two predation rules — without being told which states are valid — can derive the full valid state space by exclusion. What this means for SIRC $\mathsf{P3}$ is addressed in §10.
 
 ---
 
 ### §4. $\mathcal{J}^+$ — the ten valid states
 
-| ID | State$(F,W,G,C)$ | Description | Role |
+| ID | State $(F,W,G,C)$ | Description | Role |
 | :--- | :--- | :--- | :--- |
 | $S_1$ | $(L,L,L,L)$ | All on left | Start |
 | $S_2$ | $(L,L,L,R)$ | *Cabbage* alone on right | — |
@@ -288,11 +288,11 @@ Both paths have length $7$ (moves). Both pass through $S_1, S_6, S_3, S_8, S_5, 
 
 #### §6.1 Bottleneck structure and forced moves
 
-The *Goat* is the only degree- $2$ node in the $P_3$ constraint graph — the only object appearing in both predation rules. Its structural position as the minimum vertex cover ( $\tau(P_3)$ = 1) has a direct consequence in the transition graph: the *Farmer* must begin and end every solution with a *Goat* move.
+The *Goat* is the only degree-$2$ node in the $P_3$ constraint graph — the only object appearing in both predation rules. Its structural position as the minimum vertex cover ($\tau(P_3)$ = 1) has a direct consequence in the transition graph: the *Farmer* must begin and end every solution with a *Goat* move.
 
 This is not coincidental. The *Goat* being in both unsafe pairs means:
-- It cannot be left with the *Wolf* ( $\{W,G\}$ rule)
-- It cannot be left with the *Cabbage* ( $\{G,C\}$ rule)
+- It cannot be left with the *Wolf* ($\{W,G\}$ rule)
+- It cannot be left with the *Cabbage* ($\{G,C\}$ rule)
 - The only safe first move is to take the *Goat* across, removing it from the unattended bank
 - The only safe last move is to take the *Goat* across with the *Farmer*
 
@@ -313,13 +313,13 @@ The branching point is $S_3$ (*Goat* alone on right). At this state, the *Farmer
 
 ### §7. Minimum sufficient boundary (ablation)
 
-The $2$ predation rules are the minimum sufficient boundary conditions $\mathcal{R}$ for this puzzle.
+**The $2$ predation rules are the minimum sufficient boundary conditions $\mathcal{R}$ for this puzzle.**
 
 Ablation proof:
 - **Remove the $\{W,G\}$ rule:** *Wolf* and *Goat* can coexist unattended. The $G$-first constraint disappears — the *Farmer* can take any object first. The puzzle degrades: $|\mathcal{J}^+|$ grows to $12$, $L_{\min}$ drops to $5$, and $N_{paths} = 2$ (both are now shorter paths, no longer requiring the branching detour).
 - **Remove the $\{G,C\}$ rule:** Symmetric degradation — the *Goat* can be left with the *Cabbage*, opening trivial paths. Identical outcome: $|\mathcal{J}^+| = 12$, $L_{\min} = 5$, $N_{paths} = 2$.
-- **Remove both:** All $16$ states are valid ( $|\mathcal{J}^-| = 0$). The *Farmer* can carry anything in any order. $N_{paths} = 6$, $L_{\min} = 5$. No strategy required.
-- **Add a third rule ( $\{W,C\}$ unsafe):** $|\mathcal{J}^-|$ grows to $8$, $|\mathcal{J}^+|$ shrinks to $8$, edges drop to $6$. The *Wolf*–*Cabbage* safe-parking states are eliminated. Z3 BMC returns UNSAT — no solution exists at any path length. The puzzle is definitively unsolvable, not merely harder.
+- **Remove both:** All $16$ states are valid ($|\mathcal{J}^-| = 0$). The *Farmer* can carry anything in any order. $N_{paths} = 6$, $L_{\min} = 5$. No strategy required.
+- **Add a third rule ($\{W,C\}$ unsafe):** $|\mathcal{J}^-|$ grows to $8$, $|\mathcal{J}^+|$ shrinks to $8$, edges drop to $6$. The *Wolf*–*Cabbage* safe-parking states are eliminated. Z3 BMC returns UNSAT — no solution exists at any path length. The puzzle is definitively unsolvable, not merely harder.
 
 The two predation rules are **necessary** — removing any single rule degrades the constraint structure, producing a valid state space where $L_{\min} < 7$ — and **sufficient** — together they uniquely determine a valid state space with exactly $2$ solution paths and $L_{\min} = 7$. The minimum rule count for this puzzle is two: one rule per edge in the $P_3$ constraint graph. This is not a coincidence — the constraint graph is constructed by drawing one edge per rule, so rule count and edge count are identical by definition, not by structural discovery.
 
@@ -341,19 +341,19 @@ The two predation rules are **necessary** — removing any single rule degrades 
 
 #### §8.1 Label-free identification
 
-Nodes in the transition graph can be identified by their neighbourhood without reference to the state label. Take $S_6$: $(R,L,R,L) $.
+Nodes in the transition graph can be identified by their neighbourhood without reference to the state label. Take $S_6$: $(R,L,R,L)$.
 
 - **Predecessor states:** $S_1$ (via $e_1$) and $S_3$ (via $e_4$)
 - **Successor states:** $S_1$ (via $e_1$) and $S_3$ (via $e_4$)
-- **What it enables:** *Farmer* can return alone ( $\rightarrow S_3$) or return with *Goat* ( $\rightarrow S_1$)
+- **What it enables:** *Farmer* can return alone ($\rightarrow S_3$) or return with *Goat* ($\rightarrow S_1$)
 
-No label is required. A receiver who knows only the valid states and the move rule can identify $S_6$ by its structural position in the graph. Different naming conventions — "Configuration 6", " $RLRL$", "state reached by taking the *Goat* across first" — all point to the same node.
+No label is required. A receiver who knows only the valid states and the move rule can identify $S_6$ by its structural position in the graph. Different naming conventions — "Configuration 6", "$RLRL$", "state reached by taking the *Goat* across first" — all point to the same node.
 
 #### §8.2 Nomenclature mismatch test
 
-Suppose sender defines "*Wolf*" as the predator of *Goat* ( $W \rightarrow G$) and receiver defines "*Wolf*" as the prey of *Goat* ( $G \rightarrow W$):
-- Sender's $\mathcal{J}^- $: exclude states where $W$ and $G$ coexist unattended
-- Receiver's $\mathcal{J}^- $: exclude states where $G$ and $W$ coexist unattended
+Suppose sender defines "*Wolf*" as the predator of *Goat* ($W \rightarrow G$) and receiver defines "*Wolf*" as the prey of *Goat* ($G \rightarrow W$):
+- **Sender's $\mathcal{J}^-$:** exclude states where $W$ and $G$ coexist unattended
+- **Receiver's $\mathcal{J}^-$:** exclude states where $G$ and $W$ coexist unattended
 
 The invalid *states* are identical — both exclude $\{W,G\}$ coexisting unattended, because the set-exclusion rule is symmetric on direction. The DAG is the same. This mismatch does not produce a node identity failure.
 
@@ -375,9 +375,9 @@ This produces a *different* invalid state set and therefore a *different* DAG. T
 
 ### §9. $\mathsf{P1}$ — entailment equivalence across solution paths
 
-**Scope note: The P1 contact here is indirect. Path A and Path B are physical state sequences — they are not logical derivations and their edges do not represent entailment relations. The P1-relevant claim is narrower: the constraint packet $\mathcal{R}$ logically forces certain conclusions that are visible in both paths. Both paths are witnesses to the same set of forced conclusions, not derivations of each other.
+**Scope note:** The P1 contact here is indirect. Path A and Path B are physical state sequences — they are not logical derivations and their edges do not represent entailment relations. The P1-relevant claim is narrower: the constraint packet $\mathcal{R}$ logically forces certain conclusions that are visible in both paths. Both paths are witnesses to the same set of forced conclusions, not derivations of each other.
 
-The forced conclusions:** $\mathcal{R}$ — the two predation rules — logically entails:
+**The forced conclusions:** $\mathcal{R}$ — the two predation rules — logically entails:
 - A solution exists
 - The *Goat* must move first and last
 - The *Farmer* must make exactly seven moves
@@ -392,23 +392,23 @@ Under a stricter definition requiring structural isomorphism, Path A and Path B 
 
 This matters for SIRC because a receiver who reconstructs Path A and a receiver who reconstructs Path B have produced structurally different outputs from the same constraint packet. If both are $\mathsf{P1}$-valid, then $\mathsf{P1}$ permits multiple valid reconstructions from a single constraint packet. If only one is $\mathsf{P1}$-valid, then $\mathsf{P1}$ implicitly requires structural isomorphism — and OQ1.1 is the question of when that requirement activates.
 
-**Falsification condition: If $P_4$'s $\mathcal{R}$ does not force a unique bottleneck management sequence shared across all solution paths — i.e., some $P_4$ solution paths do not exhibit the same set of $\mathcal{R}$-forced conclusions as others — then the forced-conclusion invariant is an artefact of $P_3$'s single-bottleneck topology, not a structural property of path-graph puzzles, and this $\mathsf{P1}$ contact claim does not generalise.
+**Falsification condition:** If $P_4$'s $\mathcal{R}$ does not force a unique bottleneck management sequence shared across all solution paths — i.e., some $P_4$ solution paths do not exhibit the same set of $\mathcal{R}$-forced conclusions as others — then the forced-conclusion invariant is an artefact of $P_3$'s single-bottleneck topology, not a structural property of path-graph puzzles, and this $\mathsf{P1}$ contact claim does not generalise.
 
-Promotion condition: If all $P_4$ solution paths exhibit the same $\mathcal{R}$-forced conclusions — the same forced moves and the same bottleneck management requirements are present in every path — then the forced-conclusion invariant holds for multi-bottleneck path graphs and this claim is promoted from a single-data-point observation to a confirmed structural property.
+**Promotion condition:** If all $P_4$ solution paths exhibit the same $\mathcal{R}$-forced conclusions — the same forced moves and the same bottleneck management requirements are present in every path — then the forced-conclusion invariant holds for multi-bottleneck path graphs and this claim is promoted from a single-data-point observation to a confirmed structural property.
 
 ---
 
 ### §10. $\mathsf{P3}$ — boundary transmission
 
-$\mathcal{R}$ is sufficient to reconstruct $\mathcal{J}^+ $. A receiver who knows only the two predation rules — without being given the list of valid states — can derive the full valid state space by exclusion (as noted in §3). The constraint packet is the boundary; the receiver derives the interior.
+$\mathcal{R}$ is sufficient to reconstruct $\mathcal{J}^+$. A receiver who knows only the two predation rules — without being given the list of valid states — can derive the full valid state space by exclusion (as noted in §3). The constraint packet is the boundary; the receiver derives the interior.
 
 This is $\mathsf{P3}$'s prediction operating at its minimal form: transmit the boundary conditions, not the solution space. The two solution paths are both valid completions of the same boundary specification. The constraint packet did not specify which path to take — only which states cannot be occupied.
 
 The two solution paths also demonstrate the receiver's role in completion: two receivers starting from different positions in $\mathcal{J}^+$ may find different paths to the goal. Both are correct reconstructions from the same $\mathcal{R}$. The packet is not under-specified — it is minimally specified, consistent with $\mathsf{P3}$'s claim that the minimum sufficient boundary is a complete description of the solution space.
 
-Falsification condition: If a receiver given only the $P_4$ predation rules cannot derive $\mathcal{J}^+$ without being provided at least one valid state explicitly — i.e., if the rules alone produce reconstruction ambiguity at the larger state space — then $\mathcal{R}$-only transmission is insufficient for boundary completion, and this $\mathsf{P3}$ contact claim is an artifact of $P_3$'s small state space rather than a structural property of constraint-packet transmission.
+**Falsification condition:** If a receiver given only the $P_4$ predation rules cannot derive $\mathcal{J}^+$ without being provided at least one valid state explicitly — i.e., if the rules alone produce reconstruction ambiguity at the larger state space — then $\mathcal{R}$-only transmission is insufficient for boundary completion, and this $\mathsf{P3}$ contact claim is an artifact of $P_3$'s small state space rather than a structural property of constraint-packet transmission.
 
-Promotion condition: If a receiver given only the $P_4$ predation rules can derive $\mathcal{J}^+$ by exhaustive exclusion alone — no valid states required as starting points — then $\mathcal{R}$-only transmission is sufficient at $P_4$ scale and this claim is promoted from a single-data-point observation to a confirmed structural property of path-graph constraint packets.
+**Promotion condition:** If a receiver given only the $P_4$ predation rules can derive $\mathcal{J}^+$ by exhaustive exclusion alone — no valid states required as starting points — then $\mathcal{R}$-only transmission is sufficient at $P_4$ scale and this claim is promoted from a single-data-point observation to a confirmed structural property of path-graph constraint packets.
 
 ---
 
@@ -418,13 +418,13 @@ The minimal packet (two predation rules, $\mathcal{R}$ only) requires the receiv
 
 A sender who wanted to transmit Path A specifically — not just any solution — would need to over-constrain the packet: add constraints that exclude Path B. This requires additional sender work to compute the path-specific constraints, but eliminates the receiver's branching decision at S3.
 
-This is $\mathsf{P4}$'s inverse coupling in a concrete form: tighter specification costs more sender work and reduces receiver search. The minimal packet ( $\mathcal{R}$ only) minimises sender work at the cost of receiver search. Over-specification (transmit a solution path) eliminates receiver search at the cost of additional sender work. The two predation rules sit at the minimum sender-work point where the puzzle still has a solution.
+This is $\mathsf{P4}$'s inverse coupling in a concrete form: tighter specification costs more sender work and reduces receiver search. The minimal packet ($\mathcal{R}$ only) minimises sender work at the cost of receiver search. Over-specification (transmit a solution path) eliminates receiver search at the cost of additional sender work. The two predation rules sit at the minimum sender-work point where the puzzle still has a solution.
 
-The $\mathsf{P4}$ scaling question:** For $P_4$ (three rules, larger state space) and Hanoi ( $n-1$ rules, $3^n$ states, $2^n-1$ minimum solution length), the ratio of constraint packet size to receiver search cost changes. Hanoi provides the clearest instance: the constraint packet grows linearly ( $n-1$ rules) while the minimum solution length grows exponentially ( $2^n-1$ moves). Whether this asymmetry is a property of path-graph topology or of the ordering constraint type is the open direction.
+**The $\mathsf{P4}$ scaling question:** For $P_4$ (three rules, larger state space) and Hanoi ($n-1$ rules, $3^n$ states, $2^n-1$ minimum solution length), the ratio of constraint packet size to receiver search cost changes. Hanoi provides the clearest instance: the constraint packet grows linearly ($n-1$ rules) while the minimum solution length grows exponentially ($2^n-1$ moves). Whether this asymmetry is a property of path-graph topology or of the ordering constraint type is the open direction.
 
-**Falsification condition: If $P_4$ enumeration shows that$|\mathcal{J}^+|/|\mathcal{R}|$ (valid states per rule) does not increase relative to $P_3$'s ratio of $10/2 = 5$ — i.e., receiver search space does not grow faster than constraint packet size as the path graph scales — then the inverse coupling does not steepen with path-graph scale and this $\mathsf{P4}$ contact claim is an artefact of $P_3$'s specific size. If Hanoi's exponential solution-length growth relative to linear rule count holds for pair-exclusion constraints ( $P_4$) as well as ordering constraints, the steepening is topological; if it is specific to ordering constraints, the steepening is constraint-type-specific.
+**Falsification condition:** If $P_4$ enumeration shows that $|\mathcal{J}^+|/|\mathcal{R}|$ (valid states per rule) does not increase relative to $P_3$'s ratio of $10/2 = 5$ — i.e., receiver search space does not grow faster than constraint packet size as the path graph scales — then the inverse coupling does not steepen with path-graph scale and this $\mathsf{P4}$ contact claim is an artefact of $P_3$'s specific size. If Hanoi's exponential solution-length growth relative to linear rule count holds for pair-exclusion constraints ($P_4$) as well as ordering constraints, the steepening is topological; if it is specific to ordering constraints, the steepening is constraint-type-specific.
 
-Promotion condition:** If $P_4$ enumeration shows$|\mathcal{J}^+|/|\mathcal{R}| > 5$ (receiver search grows faster than packet size), the inverse coupling steepening is confirmed for pair-exclusion path graphs and the claim is promoted from a $P_3$-specific observation to a confirmed structural property.
+**Promotion condition:** If $P_4$ enumeration shows $|\mathcal{J}^+|/|\mathcal{R}| > 5$ (receiver search grows faster than packet size), the inverse coupling steepening is confirmed for pair-exclusion path graphs and the claim is promoted from a $P_3$-specific observation to a confirmed structural property.
 
 ---
 
@@ -446,7 +446,7 @@ For three transported objects, the possible constraint graphs are:
 |---|---|---|
 | No edges | No unsafe pairs | Trivially solvable. $L_{\min}=5$, $N_{paths}=6$. No strategy required — any carry order works. |
 | One edge (e.g. $W\text{–}G$ only) | One unsafe pair | Solvable. $L_{\min}=5$, $N_{paths}=2$. One safe parking spot; minimal constraint. |
-| **Path $P_3$ ( $W\text{–}G	ext{–}C$)** | **Two pairs sharing one node** | **Non-trivially solvable. $L_{\min}=7$, $N_{paths}=2$. Forces a key insight. Minimum complexity with a solution.** |
+| **Path $P_3$ ($W\text{–}G	ext{–}C$)** | **Two pairs sharing one node** | **Non-trivially solvable. $L_{\min}=7$, $N_{paths}=2$. Forces a key insight. Minimum complexity with a solution.** |
 | Triangle $K_3$ (all pairs unsafe) | All pairs dangerous | Unsolvable. $N_{paths}=0$ (UNSAT — Z3 certificate). No safe intermediate state exists. |
 
 $P_3$ is the unique 3-node constraint graph that is simultaneously solvable and non-trivially solvable. Remove one edge: $L_{\min}$ drops from $7$ to $5$ and the forced bottleneck strategy disappears — solvable but trivial. Add one edge (completing $K_3$): unsolvable (UNSAT). The constraint structure sits at the exact boundary between tractable-trivial and tractable-non-trivial.
@@ -468,9 +468,9 @@ The connection to the SAT phase transition (OQ4.1, `SIRC_principles.md` §P4 —
 
 In every instance, the middle item is a herbivore: both threatened by the predator and threatening to the crop. The content (which specific animals) varies by receiver substrate. The constraint structure — two predation rules sharing one node — is preserved across every instance.
 
-The mechanism here is $\mathsf{P3}$: "*Goat*" and "Chicken" occupy the same slot in the constraint packet — both are the shared element in both unsafe pairs, the degree-2 node in the $P_3$ constraint graph. The question this raises is $\mathsf{P1}$: if two receivers reconstruct the same constraint-packet structure from different surface content, have they received the same node? Their constraint role is identical: both must be supervised at all times; both create invalid states when left with either neighbour. The label is surface form. The constraint-packet role is the candidate invariant. What SIRC calls "designed mutation" ( $\mathsf{P2}$) — the surface content adapts to the receiver's substrate while the constraint structure remains fixed — is directly visible here.
+The mechanism here is $\mathsf{P3}$: "*Goat*" and "Chicken" occupy the same slot in the constraint packet — both are the shared element in both unsafe pairs, the degree-2 node in the $P_3$ constraint graph. The question this raises is $\mathsf{P1}$: if two receivers reconstruct the same constraint-packet structure from different surface content, have they received the same node? Their constraint role is identical: both must be supervised at all times; both create invalid states when left with either neighbour. The label is surface form. The constraint-packet role is the candidate invariant. What SIRC calls "designed mutation" ($\mathsf{P2}$) — the surface content adapts to the receiver's substrate while the constraint structure remains fixed — is directly visible here.
 
-Falsification condition ( $\mathsf{P3}$ mechanism, $\mathsf{P1}$ question): If $P_4$'s two bottleneck nodes (Chicken and Caterpillar) cannot be distinguished from each other by inferential role alone — both appear in exactly two predation rules, making their structural roles equivalent — then constraint-packet role fails to uniquely identify individual nodes in multi-bottleneck graphs. The $P_3$ result would be an artefact of having only one internal node: uniqueness of identification is trivially guaranteed by single-bottleneck topology, not by the invariant mechanism.
+**Falsification condition ($\mathsf{P3}$ mechanism, $\mathsf{P1}$ question):** If $P_4$'s two bottleneck nodes (Chicken and Caterpillar) cannot be distinguished from each other by inferential role alone — both appear in exactly two predation rules, making their structural roles equivalent — then constraint-packet role fails to uniquely identify individual nodes in multi-bottleneck graphs. The $P_3$ result would be an artefact of having only one internal node: uniqueness of identification is trivially guaranteed by single-bottleneck topology, not by the invariant mechanism.
 
 #### §12.4 What this section establishes and does not establish
 
@@ -504,13 +504,13 @@ Whether this directionality is part of the $\mathsf{P1}$ invariant or a cultural
 
 **OQ-P_3-CG.1 — Node identity extraction.** In a neural substrate, there is no explicit state vector — only activation patterns. How do you extract the inferential role of a node from activations without being given the state encoding? This is OQ1.2 (`SIRC_principles.md` §P1 — extractability of invariants from neural substrates) made concrete.
 
-**OQ-P_3-CG.2 — Constraint geometry.** The two predation rules share one object ( $G$). It is this overlap that creates the Goat-must-move-first constraint. A set of two predation rules with no shared object (e.g., $\{W,G\}$ unsafe, $\{F,C\}$ unsafe) would produce a different graph. The constraint geometry — which objects appear in multiple rules — determines the topology of the solution DAG. Formalising this relationship is the open direction.
+**OQ-P_3-CG.2 — Constraint geometry.** The two predation rules share one object ($G$). It is this overlap that creates the Goat-must-move-first constraint. A set of two predation rules with no shared object (e.g., $\{W,G\}$ unsafe, $\{F,C\}$ unsafe) would produce a different graph. The constraint geometry — which objects appear in multiple rules — determines the topology of the solution DAG. Formalising this relationship is the open direction.
 
 **OQ-P_3-CG.3 — Multiple solutions and the invariant.** When a constraint packet permits two solutions, what is the invariant? Is it the union of both paths? The intersection? The common subgraph? The entailment shared by both (*Goat* must move first and last)? This is OQ1.1 (`SIRC_principles.md` §P1) applied to a concrete case.
 
-**OQ-P_3-CG.4 — Transmission of constraint packet vs. solution.** This puzzle can be transmitted two ways: (a) as the two predation rules ( $\mathcal{R}$ only — minimum packet), or (b) as one of the two solution paths (a specific 7-move sequence — maximum over-determination). A receiver who gets (a) must search; a receiver who gets (b) gets the answer but cannot derive the constraint structure. What is the *optimal* packet for a receiver of known capacity? This connects OQ3.2 (`SIRC_principles.md` §P3, see §13) to $\mathsf{P4}$ (work allocation).
+**OQ-P_3-CG.4 — Transmission of constraint packet vs. solution.** This puzzle can be transmitted two ways: (a) as the two predation rules ($\mathcal{R}$ only — minimum packet), or (b) as one of the two solution paths (a specific 7-move sequence — maximum over-determination). A receiver who gets (a) must search; a receiver who gets (b) gets the answer but cannot derive the constraint structure. What is the *optimal* packet for a receiver of known capacity? This connects OQ3.2 (`SIRC_principles.md` §P3, see §13) to $\mathsf{P4}$ (work allocation).
 
-**OQ-P_3-CG.5 — The predation rules as a sublanguage.** The two predation rules are expressed as " $X$ and $Y$ cannot coexist unattended." A different sender might transmit: " $G$ must never be left alone with either $W$ or $C$." Same semantic content, different encoding. Are these the same constraint packet under $\mathsf{P3}$, or different packets that happen to produce the same $\mathcal{J}^- $? The question is whether the packet is defined by its *expression* or by its *extension* (the set of states it excludes).
+**OQ-P_3-CG.5 — The predation rules as a sublanguage.** The two predation rules are expressed as "$X$ and $Y$ cannot coexist unattended." A different sender might transmit: "$G$ must never be left alone with either $W$ or $C$." Same semantic content, different encoding. Are these the same constraint packet under $\mathsf{P3}$, or different packets that happen to produce the same $\mathcal{J}^-$? The question is whether the packet is defined by its *expression* or by its *extension* (the set of states it excludes).
 
 ---
 
@@ -522,16 +522,16 @@ The river crossing puzzle uses a $P_3$ constraint graph — the minimum structur
 
 Add one object to the chain: Fox–Chicken–Caterpillar–Leaf. The predation rules are: *Fox* eats *Chicken*; *Chicken* eats *Caterpillar*; *Caterpillar* eats *Leaf*. The constraint graph is a $P_4$ path — three pair-exclusion rules, with *Chicken* and *Caterpillar* as the two bottleneck nodes.
 
-| Property | $P_3$ ( $W\text{–}G	ext{–}C$) | $P_4$ (Fox–Chicken–Caterpillar–Leaf) |
+| Property | $P_3$ ($W\text{–}G	ext{–}C$) | $P_4$ (Fox–Chicken–Caterpillar–Leaf) |
 |---|---|---|
-| Constraint graph | $P_3$ ( $2$ edges, $3$ nodes) | $P_4$ ( $3$ edges, $4$ nodes) |
+| Constraint graph | $P_3$ ($2$ edges, $3$ nodes) | $P_4$ ($3$ edges, $4$ nodes) |
 | Minimum rules $\lvert \mathcal{R} \rvert$ | $2$ | $3$ |
 | Total states $\lvert \mathcal{S} \rvert$ | $16$ | $32$ |
 | Invalid states $\lvert \mathcal{J}^- \rvert$ | $6$ | $16$ |
 | Valid states $\lvert \mathcal{J}^+ \rvert$ | $10$ | $16$ |
 | Bottleneck nodes | $1$ (Goat) | $2$ (Chicken, Caterpillar) |
 | Vertex cover $\tau(G)$ | $1$ | $2$ |
-| Boat capacity required | $1$ | $2$ ( $\tau(P_4)=2$; unsolvable at capacity $1$) |
+| Boat capacity required | $1$ | $2$ ($\tau(P_4)=2$; unsolvable at capacity $1$) |
 | Solution paths $N_{paths}$ | $2$ | $2$ (at capacity $2$) |
 | Min. solution length $L_{\min}$ | $7$ | $3$ (at capacity $2$) |
 
@@ -539,19 +539,19 @@ The $P_4$ case tests: do two bottleneck nodes create two forced sub-strategies, 
 
 #### §15.2 Tower of Hanoi — $P_n$ ordering constraint
 
-Tower of Hanoi ( $n$ disks, $3$ pegs) uses the same path topology as the river crossing, but a total ordering constraint rather than pair exclusion. For $3$ disks, the constraint graph is a $P_3$ on disk sizes: $\text{Large} > \text{Medium} > \text{Small}$.
+Tower of Hanoi ($n$ disks, $3$ pegs) uses the same path topology as the river crossing, but a total ordering constraint rather than pair exclusion. For $3$ disks, the constraint graph is a $P_3$ on disk sizes: $\text{Large} > \text{Medium} > \text{Small}$.
 
-| Property | River crossing ( $P_3$) | Tower of Hanoi ( $P_n$) |
+| Property | River crossing ($P_3$) | Tower of Hanoi ($P_n$) |
 |:---|:---|:---|
 | Constraint graph | $P_3$ path (pair exclusion) | $P_n$ path (total order) |
-| Constraint type | " $X$ and $Y$ cannot coexist unattended" | " $X$ cannot sit on $Y$ if $X > Y$" |
+| Constraint type | "$X$ and $Y$ cannot coexist unattended" | "$X$ cannot sit on $Y$ if $X > Y$" |
 | Minimum rules $\lvert \mathcal{R} \rvert$ | $2$ (for $P_3$) | $n-1$ (one ordering rule per adjacent pair; $n$ = disk count) |
 | Min. solution length $L_{\min}$ | $7$ moves | $L_{\min} = 2^n - 1$ moves |
 | Cultural transmission evidence | Yes — multiple independent origins | Yes — Brahmin legend, Lucas (1883) |
 
 **What Tower of Hanoi adds to the fitness peak candidate claim:** Both puzzles sit at a fitness peak by the structural analysis — both are non-trivially solvable, both require a key insight. But the constraint type is different (pair exclusion vs. total ordering). If both confirm the fitness peak, the candidate claim is constraint-type agnostic: the peak is topological, not semantic. This is the task of `Pn_tower_of_hanoi.md`.
 
-What Tower of Hanoi adds to the $\mathsf{P4}$ candidate claim: Hanoi scales to arbitrary $n$ (disk count = constraint graph nodes). The minimum sufficient boundary grows linearly ( $n-1$ rules); the solution length grows exponentially ( $L_{\min} = 2^n - 1$ moves). This is the most concrete available instance of $\mathsf{P4}$'s inverse coupling claim. Whether this ratio is specific to ordering constraints or holds for path-graph puzzles in general is the open direction.
+**What Tower of Hanoi adds to the $\mathsf{P4}$ candidate claim:** Hanoi scales to arbitrary $n$ (disk count = constraint graph nodes). The minimum sufficient boundary grows linearly ($n-1$ rules); the solution length grows exponentially ($L_{\min} = 2^n - 1$ moves). This is the most concrete available instance of $\mathsf{P4}$'s inverse coupling claim. Whether this ratio is specific to ordering constraints or holds for path-graph puzzles in general is the open direction.
 
 #### §15.3 What the extensions do not resolve
 
