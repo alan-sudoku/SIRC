@@ -23,7 +23,7 @@ Four constraints on what a transmission must preserve to count as communication 
 | `SIRC_principles_retraction.md` | The retraction log — every claim probed and found absent. The negative channel: what was shed. |
 | `SIRC_principles_audit_prompt.md` | Adversarial audit prompt — structured attacks for an AI auditor to run against the principles. |
 | `SIRC_glossary.md` | Notation reference — $C_-$ / $C_+$ (abstract) vs. $\mathcal{J}^-$ / $\mathcal{J}^+$ (concrete state sets); not interchangeable. |
-| `constraint-graph_testbed/P_3/P_3_river_crossing.md` | First experiment — uses the Wolf–Goat–Cabbage river crossing puzzle to make $\mathsf{P1}$'s node identity clause concrete. |
+| `constraint-graph_testbed/P_3/P_3_river_crossing.md` | First experiment — uses the Wolf–Goat–Cabbage $P_3$ River Crossing puzzle to make $\mathsf{P1}$'s node identity clause concrete. |
 | `constraint-graph_testbed/P_3/P_3_audit_prompt.md` | Section-by-section audit prompt for the $P_3$ experiment document. |
 | `constraint-graph_testbed/constraint-graph_testbed_retraction.md` | Retraction log for the experiment series. |
 | `constraint-graph_testbed/P_4/P_4_river_crossing.md` *(forthcoming)* | Second experiment — extends to a $P_4$ constraint graph (Fox–Chicken–Caterpillar–Leaf). Baseline comparisons from $P_3$ are tested here. |
