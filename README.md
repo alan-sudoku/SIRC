@@ -60,7 +60,7 @@ Reading both halves is optional. Reading only the positive channel is reading a 
 Start at $\mathsf{P1}$'s typed DAG definition and OQ1.1 (minimal vs. non-minimal dependency structure). $\mathsf{P3}$'s constraint packet is the engineering claim — what a sender must transmit for the receiver to reconstruct within bounds. $\mathsf{P4}$'s asymmetry theorem is where the protocol touches computational complexity. If reading the experiment documents: check `SIRC_glossary.md` first — the $C_-$ / $\mathcal{J}^-$ distinction matters.
 
 **Formal logician / type theorist:**
-$\mathsf{P1}$'s entailment equivalence criterion is the load-bearing definition. OQ1.4 (inference-system dependence) is the known gap. The typed DAG operator requirement (AND, OR, NOT and equivalents) is the scope condition — read the Substrate scope subsection in the Preamble before evaluating the universality claim. If reading the experiment documents: check `SIRC_glossary.md` first — the $C_-$ / $\mathcal{J}^-$ distinction matters.
+$\mathsf{P1}$'s entailment equivalence criterion is the definition on which P1-validity turns. OQ1.4 (inference-system dependence) is the known gap. The typed DAG operator requirement (AND, OR, NOT and equivalents) is the scope condition — read the Substrate scope subsection in the Preamble before evaluating the universality claim. If reading the experiment documents: check `SIRC_glossary.md` first — the $C_-$ / $\mathcal{J}^-$ distinction matters.
 
 **General reader (no technical background):**
 Use this prompt with an AI and `SIRC_principles.md` attached:
