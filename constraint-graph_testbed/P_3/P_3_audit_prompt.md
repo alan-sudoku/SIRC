@@ -26,7 +26,7 @@ The audit must respect these layers. A Part III section that says "this is a can
 
 **Assemble inputs:**
 
-1. **$\mathsf{P1}\text{–}\mathsf{P4}$ Principles** — paste the full text of `SIRC_principles.md` (two levels up: `../../SIRC_principles.md`). This is the compliance standard. Do not summarize it.
+1. $\mathsf{P1}\text{–}\mathsf{P4}$ Principles — paste the full text of `SIRC_principles.md` (two levels up: `../../SIRC_principles.md`). This is the compliance standard. Do not summarize it.
 2. **Section context** — three sub-inputs, assembled as follows:
    - **Input 2.1 — Previous sections:** paste all sections preceding the target section verbatim. *Required for Pass 3 (redundancy check) and Pass 4 (symmetry check). May be omitted for Pass 1 and Pass 2 only.*
    - **Input 2.2 — Target section:** paste the target section verbatim. Required for all passes.
@@ -97,10 +97,10 @@ Work through all four passes in order. Do not skip a pass. Do not merge passes.
 
 Check:
 - **State space:** Does the state space definition generate exactly $2^n$ states? For P₃: $n=4$, $|\mathcal{S}|=16$.
-- **$\mathcal{R}$ generates $\mathcal{J}^-$:** Apply the stated predation rules to all states. Does the result match the §3 invalid-state table exactly? Count the invalid states.
-- **$\mathcal{J}^+$ derivation:** Is $\mathcal{J}^+$ exactly $\mathcal{S} \setminus \mathcal{J}^-$? Count the valid states.
-- **Edge table:** Apply the formal move rule to all states in $\mathcal{J}^+$. Does the result match the §5 edge table exactly?
-- **$N_{paths}$ and $L_{min}$:** Are the solution path count and minimum length derivable from the edge table by inspection?
+- $\mathcal{R}$ generates $\mathcal{J}^- $: Apply the stated predation rules to all states. Does the result match the §3 invalid-state table exactly? Count the invalid states.
+- $\mathcal{J}^+$ derivation: Is $\mathcal{J}^+$ exactly $\mathcal{S} \setminus \mathcal{J}^- $? Count the valid states.
+- **Edge table: Apply the formal move rule to all states in $\mathcal{J}^+ $. Does the result match the §5 edge table exactly?
+- $N_{paths}$ and $L_{min}$:** Are the solution path count and minimum length derivable from the edge table by inspection?
 
 **Verdict:** `Consistent` (all checks pass) or `Inconsistency found` (name the table and the specific discrepancy).
 
@@ -127,7 +127,7 @@ Stop. Skip passes 2–4 for Part I sections. Part I is not audited for SIRC cont
 - **Principle contact:** Name the P-number(s) the section claims contact with. If a section claims contact with more than one principle (e.g., "P3 mechanism, P1 question"), list each separately. For each, quote the specific principle text the section is claiming contact with.
 - **Contact classification:** For each named principle, classify the contact independently: `Requirement` (derived from the principle), `Candidate mechanism` (consistent with the principle but not derived), or `Fails contact` (imports a constraint not in the principle). A section with dual-principle contact requires two classifications.
 - **Falsification condition:** Does the section state what evidence from $P_4$ or Hanoi would falsify the candidate claim? A falsification condition must be claim-specific — a blanket reference to the Part III preamble ("falsifiable by P4/Hanoi") is not sufficient. If yes, quote the condition and confirm it is claim-specific. If the condition is only a preamble reference, treat it as missing.
-- **Overclaim check:** Does the section assert more than "the puzzle is consistent with principle $\mathsf{Pn}$"? A candidate claim at this stage is permitted to say the puzzle demonstrates contact — not that it proves the principle applies universally. Additionally, check for indirect-contact overclaim: if the section's P1 contact is mediated through a third object (e.g., $\mathcal{R}$-forced conclusions, or constraint-packet role invariance), verify the section does not claim direct P1 contact. Asserting that solution paths or constraint-graph edges instantiate P1's entailment map when they do not is an indirect-contact overclaim.
+- **Overclaim check: Does the section assert more than "the puzzle is consistent with principle $\mathsf{Pn}$"? A candidate claim at this stage is permitted to say the puzzle demonstrates contact — not that it proves the principle applies universally. Additionally, check for indirect-contact overclaim: if the section's P1 contact is mediated through a third object (e.g., $\mathcal{R}$-forced conclusions, or constraint-packet role invariance), verify the section does not claim direct P1 contact. Asserting that solution paths or constraint-graph edges instantiate P1's entailment map when they do not is an indirect-contact overclaim.
 
 Stop. Do not proceed to Pass 3 until Pass 2 is complete.
 
@@ -135,7 +135,7 @@ Stop. Do not proceed to Pass 3 until Pass 2 is complete.
 
 ### Pass 3 — MDL check (Parts II, III, IV)
 
-**Applies to:** §6–15.
+Applies to:** §6–15.
 
 **Question:** Does this section carry load, or is it scaffolding?
 

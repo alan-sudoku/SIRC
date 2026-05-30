@@ -19,7 +19,7 @@
 
 ### Pedagogical sequence — $\mathsf{P2}$ motivates $\mathsf{P1}$
 
-$\mathsf{P2}$ motivates $\mathsf{P1}$ — understanding that loss is unavoidable ($\mathsf{P2}$) explains why invariance rather than full fidelity is the correct target ($\mathsf{P1}$). This is comprehension order, not logical derivation. $\mathsf{P1}$ and $\mathsf{P2}$ are non-derivable from each other: $DPI$ holds without reference to any consequence relation; the logical equivalence criterion holds without reference to any information channel. They interact in application: $\mathsf{P1}$ defines the invariant; $\mathsf{P2}$ characterises why the system must target invariant preservation rather than full fidelity. Application-level coupling is not logical derivation. $\mathsf{P1}$ defines what $\mathsf{P3}$ must encode. $\mathsf{P4}$ follows from $\mathsf{P3}$. $\mathsf{P2}$ does not have a direct dependency edge to $\mathsf{P4}$: higher substrate mismatch increases required work, but that relationship runs through $\mathsf{P3}$ — more entropy requires tighter constraints ($\mathsf{P3}$), which increases sender work ($\mathsf{P4}$). A direct $\mathsf{P2}$ → $\mathsf{P4}$ reading obscures the mechanism.
+$\mathsf{P2}$ motivates $\mathsf{P1}$ — understanding that loss is unavoidable ( $\mathsf{P2}$) explains why invariance rather than full fidelity is the correct target ( $\mathsf{P1}$). This is comprehension order, not logical derivation. $\mathsf{P1}$ and $\mathsf{P2}$ are non-derivable from each other: $DPI$ holds without reference to any consequence relation; the logical equivalence criterion holds without reference to any information channel. They interact in application: $\mathsf{P1}$ defines the invariant; $\mathsf{P2}$ characterises why the system must target invariant preservation rather than full fidelity. Application-level coupling is not logical derivation. $\mathsf{P1}$ defines what $\mathsf{P3}$ must encode. $\mathsf{P4}$ follows from $\mathsf{P3}$. $\mathsf{P2}$ does not have a direct dependency edge to $\mathsf{P4}$: higher substrate mismatch increases required work, but that relationship runs through $\mathsf{P3}$ — more entropy requires tighter constraints ( $\mathsf{P3}$), which increases sender work ( $\mathsf{P4}$). A direct $\mathsf{P2}$ → $\mathsf{P4}$ reading obscures the mechanism.
 
 ### Categorical scope — four independent mathematical domains
 
@@ -46,19 +46,19 @@ The claims in this document fall into two epistemologically distinct categories.
 
 None of these produce a certificate. They produce *consensus*. Consensus among AI auditors has a specific failure mode: **correlated training data**. A reasoning error widespread enough in the pretraining corpus will survive cross-model audit because every auditor shares the same blind spot. Cross-model audit catches idiosyncratic errors; it cannot catch systemic ones.
 
-**The experimental programme is the only verification path for synthesis claims.** The puzzle series ($P_3$, $P_4$ River Crossing, Tower of Hanoi, Latin square) is not illustration — it is the mechanism by which synthesis claims transition from audited-and-consistent to empirically grounded. The progression:
+**The experimental programme is the only verification path for synthesis claims.** The puzzle series ( $P_3$, $P_4$ River Crossing, Tower of Hanoi, Latin square) is not illustration — it is the mechanism by which synthesis claims transition from audited-and-consistent to empirically grounded. The progression:
 
 | Stage | Status | Verification mechanism |
 |---|---|---|
 | Enumerable puzzle values | Definitively proved | Verifier certificate (BFS + Z3 UNSAT) |
 | Ablation outcomes | Definitively proved | Verifier certificate — all rows enumerated |
-| Structural pattern within one puzzle family | Candidate | Consistent across $P_3$ and $P_4$ enumeration |
+| Structural pattern within one puzzle family | Candidate | Consistent across $P_3$ and $P_4$ River Crossing enumeration |
 | Generalisation across puzzle families | Conjecture | Requires Tower of Hanoi, Latin square, DAG experiments |
 | Synthesis claims in §P1–P4 | Audited conjecture | Consistent under multi-model audit; no certificate available |
 
 A synthesis claim in § $\mathsf{P1}\text{–}\mathsf{P4}$ that survives audit but has no grounding in the experimental programme remains an audited conjecture. A synthesis claim that is confirmed by enumerable results across multiple puzzle families is an empirically supported claim — still not a formal proof, but qualitatively different from consensus alone.
 
-**Self-referential note:** SIRC principles claims that reasoning transmission between substrates has structural properties ($\mathsf{P3}$, $\mathsf{P4}$). The audit process that produced and maintains this document is itself a reasoning transmission between AI substrates. The document cannot escape its own scope condition: the audit loop is inside the system being described, not outside it. The puzzle experiments are the only part of the programme that operates outside this loop — the verifier produces results independently of what any AI substrate believes about them.
+**Self-referential note:** SIRC principles claims that reasoning transmission between substrates has structural properties ( $\mathsf{P3}$, $\mathsf{P4}$). The audit process that produced and maintains this document is itself a reasoning transmission between AI substrates. The document cannot escape its own scope condition: the audit loop is inside the system being described, not outside it. The puzzle experiments are the only part of the programme that operates outside this loop — the verifier produces results independently of what any AI substrate believes about them.
 
 ---
 
@@ -165,8 +165,8 @@ The protocol targets invariant structure preservation, not full fidelity. Loss o
 ### Open questions — OQ2.1
 
 - OQ2.1 — The loss profile under substrate mismatch has two distinct components that must not be conflated:
-  - *Scope (designed mutation):* Non-invariant surface content (cultural surface, tone, narrative specifics) is expected to differ across receivers when the sender transmits Layer 1 only (bare logical form). A receiver reconstructing a hero's journey will produce a structurally identical journey with culturally different content — Achilles in one substrate, Susanoo in another. This is $\mathsf{P3}$ operating correctly, not a failure. $\mathsf{P2}$ predicts and accepts this loss. Note: the Achilles/Susanoo example is the Layer 1-only outcome ($\mathsf{P1}$-invariant content only, no optional surface-form guidance — see § $\mathsf{P3}$). A sender who includes Layer 2 domain guidance (e.g., a cultural context pointer to Greek mythology) narrows the receiver's instantiation space and reduces designed mutation. Whether to include Layer 2 is a sender choice on the $\mathsf{P4}$ curve — more sender work produces more communicatively targeted reconstruction. Without Layer 2, domain is determined by the receiver's prior knowledge; with Layer 2, domain is constrained by the guidance in the packet. Neither outcome is a protocol failure; they are different operating points on the $\mathsf{P3}$ / $\mathsf{P4}$ design space.
-  - *Claim (transmission failure):* Invariant structural content ($\mathsf{P1}$-protected entailment map and dependency structure) is not preserved. This is a $\mathsf{P1}$ violation and constitutes a failed transmission.
+  - *Scope (designed mutation):* Non-invariant surface content (cultural surface, tone, narrative specifics) is expected to differ across receivers when the sender transmits Layer 1 only (bare logical form). A receiver reconstructing a hero's journey will produce a structurally identical journey with culturally different content — Achilles in one substrate, Susanoo in another. This is $\mathsf{P3}$ operating correctly, not a failure. $\mathsf{P2}$ predicts and accepts this loss. Note: the Achilles/Susanoo example is the Layer 1-only outcome ( $\mathsf{P1}$-invariant content only, no optional surface-form guidance — see § $\mathsf{P3}$). A sender who includes Layer 2 domain guidance (e.g., a cultural context pointer to Greek mythology) narrows the receiver's instantiation space and reduces designed mutation. Whether to include Layer 2 is a sender choice on the $\mathsf{P4}$ curve — more sender work produces more communicatively targeted reconstruction. Without Layer 2, domain is determined by the receiver's prior knowledge; with Layer 2, domain is constrained by the guidance in the packet. Neither outcome is a protocol failure; they are different operating points on the $\mathsf{P3}$ / $\mathsf{P4}$ design space.
+  - *Claim (transmission failure):* Invariant structural content ( $\mathsf{P1}$-protected entailment map and dependency structure) is not preserved. This is a $\mathsf{P1}$ violation and constitutes a failed transmission.
   - The open question is specifically the loss profile of invariant content under substrate mismatch: under what conditions does the structural pattern itself degrade, and by how much. The mutation of non-invariant surface content is characterised by design — it is determined by the receiver's substrate.
 
 ---
@@ -177,7 +177,7 @@ A packet encodes boundary conditions of a thought, not its content. "Boundary co
 ### Grounding
 
 - **Algorithmic information theory (AIT)** --- Kolmogorov complexity: 
-the minimum description length ($MDL$) of an object is well-defined. 
+the minimum description length ( $MDL$) of an object is well-defined. 
 $MDL$ establishes that a minimum sufficient description exists; it does not distinguish boundary conditions from content --- in AIT, both are programs that generate strings. AIT grounds $\mathsf{P3}$'s claim that a minimum description exists; it does not ground the constraint/content distinction.
 - **Optimisation theory** — the constraint/content distinction is grounded here, not in AIT. Boundary conditions on a feasible set are a standard compact representation of a solution space. The set of solutions consistent with a constraint system is fully determined by those constraints. $\mathsf{P3}$ applies AIT (minimum description exists) and Optimisation Theory (boundary conditions are the correct encoding type) as independent supports for different parts of the principle.
 

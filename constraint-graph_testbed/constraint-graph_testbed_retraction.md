@@ -1,8 +1,8 @@
 # Constraint-Graph Testbed Series — Retraction Log
 
-Every retracted claim, overclaimed scope, and corrected assessment across the Constraint-Graph Testbed series. The log is the negative channel ($C_-$) of the series — what was probed and found absent or misformulated. It carries boundary information: what the experiment series cannot claim constrains what it can claim.
+Every retracted claim, overclaimed scope, and corrected assessment across the Constraint-Graph Testbed series. The log is the negative channel ( $C_- $) of the series — what was probed and found absent or misformulated. It carries boundary information: what the experiment series cannot claim constrains what it can claim.
 
-**Structural role (SIRC vocabulary):** The three (and planned four) Constraint-Graph Testbed documents are the positive channel ($C_+$) — the enumerated findings, conjectures, and structural comparisons that survived audit. This log is $C_-$ — the designed mutation record. Each entry is a claim that appeared to belong in the series but was shown to be non-invariant surface: a misidentification, a formulation that applied to the wrong encoding, or a conclusion downstream of a false premise. Shedding these is P2-governed behaviour, not failure. The series documents and this log together form a complete exploration record.
+**Structural role (SIRC vocabulary):** The three (and planned four) Constraint-Graph Testbed documents are the positive channel ( $C_+ $) — the enumerated findings, conjectures, and structural comparisons that survived audit. This log is $C_-$ — the designed mutation record. Each entry is a claim that appeared to belong in the series but was shown to be non-invariant surface: a misidentification, a formulation that applied to the wrong encoding, or a conclusion downstream of a false premise. Shedding these is P2-governed behaviour, not failure. The series documents and this log together form a complete exploration record.
 
 **Scope:** This log covers all Constraint-Graph Testbed documents in `constraint-graph_testbed/`. It does not cover retractions to or `SIRC_principles.md` — those have their own retraction logs.
 
@@ -102,7 +102,7 @@ This conclusion was downstream of R2. The stated criteria for a valid gap-filler
 
 ### What replaces it
 
-> Jealous husbands ($C_6$ conflict graph, named-individual encoding) is the fourth document in the planned series. Status: planned, do not begin until Hanoi is complete. Cultural universality scope is limited — the fourth document contributes to the structural/topological claim only.
+> Jealous husbands ( $C_6$ conflict graph, named-individual encoding) is the fourth document in the planned series. Status: planned, do not begin until Hanoi is complete. Cultural universality scope is limited — the fourth document contributes to the structural/topological claim only.
 
 ### Exploration value
 
@@ -115,27 +115,27 @@ R3's retraction clarified what "valid gap-filler" actually requires. The revised
 **Description:** "P1 work operates on the constraint graph" — constraint graph misidentified as P1 object
 **Source:** `P_3_river_crossing.md` — notation note (added 2026-04-12 during two-graph separation edit)
 **Date:** 2026-04-12
-**Retraction trigger:** Gemini audit rejoinder (2026-04-12) — Point 2: the constraint graph's edges are predation relations ("eats"), not entailment relations ($\vdash$). P1's invariant is the entailment map $\Gamma \vdash C$; a graph with semantic edges does not instantiate this.
+**Retraction trigger:** Gemini audit rejoinder (2026-04-12) — Point 2: the constraint graph's edges are predation relations ("eats"), not entailment relations ( $\vdash$). P1's invariant is the entailment map $\Gamma \vdash C$; a graph with semantic edges does not instantiate this.
 
 ### Why retracted
 
-The notation note was added to resolve the original Gemini audit finding: that the state-transition graph ($\mathcal{G}_T$) was being conflated with the constraint graph. The separation was correct. But the note went further and asserted: *"The $\mathsf{P1}$ work operates on the constraint graph, not $\mathcal{G}_T$."*
+The notation note was added to resolve the original Gemini audit finding: that the state-transition graph ( $\mathcal{G}_T$) was being conflated with the constraint graph. The separation was correct. But the note went further and asserted: "The $\mathsf{P1}$ work operates on the constraint graph, not $\mathcal{G}_T$."
 
-This overclaimed. The constraint graph ($P_3$ path: Wolf–Goat–Cabbage) is $\mathcal{R}$ — the constraint packet. It is P3's object: its nodes are transported objects, its edges are predation relations. The edges mean "eats," not "entails." P1's invariant requires the entailment map ($\Gamma \vdash C$) — a graph whose edges represent logical consequence. The constraint graph does not qualify. Routing P1 work through the constraint graph imports the wrong edge semantics into P1's domain.
+This overclaimed. The constraint graph ( $P_3$ path: Wolf–Goat–Cabbage) is $\mathcal{R}$ — the constraint packet. It is P3's object: its nodes are transported objects, its edges are predation relations. The edges mean "eats," not "entails." P1's invariant requires the entailment map ( $\Gamma \vdash C$) — a graph whose edges represent logical consequence. The constraint graph does not qualify. Routing P1 work through the constraint graph imports the wrong edge semantics into P1's domain.
 
 The error was produced by correctly identifying that $\mathcal{G}_T$ is not the P1-relevant object, then incorrectly concluding that the constraint graph must therefore be. A third object was needed: the entailment map. That object is not directly instantiated in these puzzles.
 
 ### Retracted content
 
-> *"The $\mathsf{P1}$ work operates on the constraint graph, not $\mathcal{G}_T$."*
+> "The $\mathsf{P1}$ work operates on the constraint graph, not $\mathcal{G}_T$."
 
 ### What replaces it
 
-> *"The constraint graph is $\mathcal{R}$ — P3's object, the constraint packet. Its edges are predation relations ('eats'), not entailment relations ($\vdash$). P1 contact in this document comes through inferential role identification (§12.3), not through the constraint graph's edges."*
+> "The constraint graph is $\mathcal{R}$ — P3's object, the constraint packet. Its edges are predation relations ('eats'), not entailment relations ( $\vdash$). P1 contact in this document comes through inferential role identification (§12.3), not through the constraint graph's edges."
 
 P1 contact in the series is indirect and comes through two channels:
-1. **§9** — $\mathcal{R}$ logically forces certain conclusions ("Goat first and last," 7 moves minimum) regardless of which solution path a receiver finds. Both paths are witnesses to the same $\mathcal{R}$-entailed conclusions. The paths are not the entailment chain; $\mathcal{R}$ is.
-2. **§12.3** — the constraint-packet role (degree-2 node in $P_3$) is invariant across cultural substrates. The mechanism is P3 (same slot in the constraint packet); the question it raises is P1 (same node identity across transmissions).
+1. **§9 — $\mathcal{R}$ logically forces certain conclusions ("Goat first and last," 7 moves minimum) regardless of which solution path a receiver finds. Both paths are witnesses to the same $\mathcal{R}$-entailed conclusions. The paths are not the entailment chain; $\mathcal{R}$ is.
+2. §12.3** — the constraint-packet role (degree-2 node in $P_3$) is invariant across cultural substrates. The mechanism is P3 (same slot in the constraint packet); the question it raises is P1 (same node identity across transmissions).
 
 ### Exploration value
 
@@ -144,8 +144,8 @@ The retraction produced a three-way separation that was absent before:
 | Object | Symbol | Belongs to | Edge type |
 |---|---|---|---|
 | State-transition graph | $\mathcal{G}_T$ | P3/P4 operational (enumeration) | Bidirectional physical moves |
-| Constraint graph | $P_3$ path ($\mathcal{R}$) | P3 (constraint packet) | Predation relations ("eats") |
-| Entailment map | — | P1 | Logical consequence ($\vdash$) |
+| Constraint graph | $P_3$ path ( $\mathcal{R}$) | P3 (constraint packet) | Predation relations ("eats") |
+| Entailment map | — | P1 | Logical consequence ( $\vdash$) |
 
 The series was operating as if separating two graphs resolved the P1 question. The retraction reveals that P1 requires a third object — the entailment map — which is not directly instantiated in these puzzles. P1 contact is therefore indirect in this series: accessible through $\mathcal{R}$-forced conclusions (§9) and constraint-packet role invariance (§12.3), but not through any graph whose edges are directly present in the documents. This is a more precise description of the P1 gap and defines what a true P1 testbed would need to provide: a puzzle whose solution structure is a branching logical deduction graph, not a state-transition search.
 
