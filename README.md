@@ -80,6 +80,6 @@ The argument structure audit tools used to develop and maintain these documents 
 
 ## Status
 
-Working documents. No institutional affiliation. Version history is in the document headers (`SIRC_principles.md` is at v3.07).
+Working documents. No institutional affiliation. `SIRC_principles.md` is at **v3.07**. Two-part versioning: **major** (`v3→v4`) on new $\mathsf{P}$ constraint added — the only event that changes what the protocol is; **minor** (`.07→.08`) per working session that produces a structural change to an argument (author judgment — retraction log entries do not individually trigger it). The retraction log is the authoritative record of what changed, not a version counter.
 
 The most productive external input at this stage: adversarial audits of $\mathsf{P1}$'s node identity criterion (OQ1.1 and OQ1.4) and assessment of whether $P_3$ River Crossing's constraint graph analysis correctly identifies the SIRC-relevant object.
