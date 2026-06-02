@@ -1,3 +1,8 @@
+---
+title: Derived Analysis - AI Training Paradigm
+description: Applies the four SIRC principles to the current AI training paradigm as a diagnostic framework.
+---
+
 # Substrate-Independent Reasoning Communication (SIRC) — Derived Analysis: AI Training Paradigm
 
 ## Table of Contents

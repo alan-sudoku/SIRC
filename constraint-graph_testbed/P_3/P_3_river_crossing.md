@@ -1,3 +1,8 @@
+---
+title: Constraint-Graph Testbed — P_3 River Crossing
+description: Wolf-Goat-Cabbage (P_3 River Crossing) puzzle used to test SIRC P1‘s node identity clause against a concrete constraint graph.
+---
+
 # Constraint-Graph Testbed — $P_3$ River Crossing
 
 **Status:** Active exploration — not theory, not principles. Claims here are candidates for later promotion or retraction.
