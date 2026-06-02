@@ -17,7 +17,7 @@ description: Applies the four SIRC principles to the current AI training paradig
 
 **Dependency on principles:** All claims trace to [[SIRC_principles|SIRC Principles]] § $\mathsf{P1}$–§ $\mathsf{P4}$. No new principles are introduced. Claims not derivable from $\mathsf{P1}\text{–}\mathsf{P4}$ are marked *Conjecture*.
 
-**External reference: Model collapse as an established phenomenon — Shumailov et al. (2023), "The Curse of Recursion."
+*External reference: Model collapse as an established phenomenon — Shumailov et al. (2023), "The Curse of Recursion."*
 
 ---
 
