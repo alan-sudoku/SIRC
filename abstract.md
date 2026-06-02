@@ -1,6 +1,6 @@
 ---
 title: "Substrate-Independent Reasoning Communication (SIRC): Four Protocol Constraints"
-description: Deposit metadata — abstract, keywords, version, and licence for DOI submission
+description: "Deposit metadata — abstract, keywords, version, and licence for DOI submission"
 ---
 
 # Abstract
