@@ -1,6 +1,6 @@
 # Constraint-Graph Testbed — $P_4$ River Crossing
 
-**Status:** Active exploration. Parts I–II complete (§1–8); Part III complete (§9–10); Part IV complete (§11–12). See HOLDING section at the bottom for pre-structure content awaiting absorption.
+**Status:** Active exploration. Parts I–II complete (§1–8); Part III complete (§9–10); Part IV complete (§11–12).
 **Purpose:** Extend the $P_3$ river crossing analysis to a four-object constraint graph ( $P_4$ path: Fox–Chicken–Caterpillar–Leaf). Test whether the fitness peak criterion, minimum sufficient boundary results, and OQ-DAG findings from the $P_3$ case generalise to a larger constraint graph of the same topology. The $P_3$ results are assumed known — this document records what changes and what breaks.
 **Companion document:** `P_3_river_crossing.md` — all $P_3$ results referenced here are the baseline. Dependency direction: $P_3$ is the baseline; this document is the extension.
 
@@ -10,17 +10,17 @@
 | :--- | :--- | :--- | :--- |
 | State space enumeration | Derives $\mathcal{J}^-$ and $\mathcal{J}^+$ by exhaustive application of 3 predation rules to all $2^5$ states | I | Complete |
 | Transition graph construction | Maps valid states as nodes and legal Farmer moves as edges; identifies solution paths | I | Complete |
-| Constraint ablation | Removes each of the 3 predation rules in isolation — establishes necessity of each | II | STUB |
-| Inferential role substitution | Tests node identity failure under semantic relabelling — same label, different role | II | STUB |
-| Cross-topology structural comparison | Compares $P_4$ results directly against $P_3$ results — tests whether the fitness peak criterion generalises | II | STUB |
+| Constraint ablation | Removes each of the 3 predation rules in isolation — establishes necessity of each | II | Complete — §7 |
+| Inferential role substitution | Tests node identity failure under semantic relabelling — same label, different role | II | Complete — §6.3 |
+| Cross-topology structural comparison | Compares $P_4$ results directly against $P_3$ results — tests whether the fitness peak criterion generalises | II | Complete — §8 |
 
-**Epistemic structure:** This document uses four explicit layers. Claims do not cross layers without promotion. Part III sections do not yet exist — they will be written after Part I enumeration is complete.
+**Epistemic structure:** This document uses four explicit layers. Claims do not cross layers without promotion.
 
 | Part | Layer | Epistemic status |
 | :--- | :--- | :--- |
 | I — Formal record | §1–5 | Proven by enumeration only. No interpretation required. §1–5 complete. |
 | II — Structural observations | §6–8 | Patterns visible in the enumerated data; not yet proved to generalise. All sections stub pending enumeration. |
-| III — SIRC connections | Pending | Candidate claims connecting structural observations to SIRC principles; falsifiable by Hanoi. Will address $\mathsf{P1}$ entailment equivalence, $\mathsf{P3}$ boundary transmission, $\mathsf{P4}$ work allocation, and the fitness peak hypothesis — mirroring $P_3$ §9–12. |
+| III — SIRC connections | §9–10 | Claims connecting structural observations to SIRC principles; falsifiable by Hanoi. §9: $\mathsf{P1}$ pair invariance and $\mathsf{P3}$ boundary transmission. §10: $\mathsf{P4}$ work allocation, irreducible constraint basis, node identity. |
 | IV — Scope and open questions | §11–12 | What this puzzle cannot establish, and the questions it raises. |
 
 ---
@@ -39,7 +39,7 @@
 | §8 | Structural comparison with $P_3$ | II — Structural observations | Complete |
 | §9 | $\mathsf{P1}$ and $\mathsf{P3}$ — pair invariance and boundary transmission | III — SIRC connections | Complete |
 | §10 | $\mathsf{P4}$ work allocation, irreducible constraint basis, and node identity | III — SIRC connections | Complete |
-| §11 | What this puzzle does not resolve | IV — Scope and open questions | Complete — 4 scope limitations |
+| §11 | What this puzzle does not resolve | IV — Scope and open questions | Complete — 3 scope limitations |
 | §12 | Open questions raised by $P_4$ | IV — Scope and open questions | Complete — 6 open questions (OQ-DAG.2, .3, .6, .7; OQ-P4.1, .2) |
 
 ---
@@ -82,7 +82,7 @@ The $P_3$ river crossing established that the SIRC constraint framework is coher
 
 $P_4$ tests all three results under a one-step increase in constraint graph size. The constraint graph gains one node and one edge; the constraint type (pair exclusion, unattended bank) is unchanged. This isolates the effect of graph size from the effect of constraint type, but not from required boat capacity: $P_3$ is solvable at $b=1$; $P_4$ requires $b=2$ (§5, §6.1). The capacity increase is a structural consequence of the larger minimum vertex cover ($\tau(P_4)=2$ vs $\tau(P_3)=1$), not a separately varied parameter.
 
-**Three questions this document investigates (not all answered — see §12 for scope):**
+**Four questions this document investigates (not all answered — see §12 for scope):**
 
 1. **Does the fitness peak criterion generalise, or does it reduce to an irreducible lower boundary?** For N=4, is the $P_4$ path the unique constraint graph at the lower boundary of a solvable region, or does the boundary condition change character? *(Investigated in §7–8; deferred to OQ-DAG.2 — see §12.)*
 2. **How many solution paths does $P_4$ produce, and what is the trunk structure?** $P_3$ produces exactly 2, sharing a common trunk. $P_4$ has two bottleneck nodes (Chicken and Caterpillar). §5 establishes $N_{paths}=2$; §6 analyses the trunk structure.
@@ -99,7 +99,7 @@ Each object is on either bank: L (left, start) or R (right, goal).
 
 **Move rule:** Farmer must move on every turn (to the opposite bank). Farmer may bring at most $b$ other objects from their current bank, where $b$ is the boat capacity.
 
-**Move rule (formal):** Let $\bar{b}$ denote the opposite of bank $b$. A transition from state $s$ to state $s'$ is legal if and only if:
+**Move rule (formal):** Let $\overline{b}$ denote the opposite of bank $b$. A transition from state $s$ to state $s'$ is legal if and only if:
 
 $$F_{s'} = \overline{F_s}$$
 
@@ -493,7 +493,7 @@ Whether pair-membership constraint constitutes a meaningful $\mathsf{P1}$ invari
 
 This makes OQ1.1 ([SIRC_principles.md](SIRC_principles.md) §P1 — whether the invariant requires minimal dependency structure or permits equivalent non-minimal derivations) more concrete at $N=4$: two receivers reconstructing different orderings from the same $\mathcal{R}$ both reconstruct the same forced-pairing conclusions but different path sequences. If $\mathsf{P1}$ is defined over the conclusion set, both paths are $\mathsf{P1}$-equivalent. If it requires structural isomorphism of the reconstruction sequence, they are not.
 
-**Falsification condition for further generalisation:** If $P_5$ or another multi-path puzzle ($N_\text{paths} > 1$ required) produces solution paths where different paths exhibit *different* $\mathcal{R}$-forced conclusions — some paths require a move that others do not — then the forced-conclusion invariant does not hold across all path-graph puzzles and the Candidate status of the pair-membership invariant is topology-specific. (Hanoi's minimal transition graph has $N_\text{paths}=1$ — a unique shortest solution — and cannot test path-to-path conclusion divergence; $P_5$ river crossing is the applicable next testbed.)
+**Falsification condition for further generalisation:** If $P_5$ or another multi-path puzzle ($N_{paths} > 1$ required) produces solution paths where different paths exhibit *different* $\mathcal{R}$-forced conclusions — some paths require a move that others do not — then the forced-conclusion invariant does not hold across all path-graph puzzles and the Candidate status of the pair-membership invariant is topology-specific. (Hanoi's minimal transition graph has $N_{paths}=1$ — a unique shortest solution — and cannot test path-to-path conclusion divergence; $P_5$ river crossing is the applicable next testbed.)
 
 #### $\mathsf{P3}$ — Candidate (finite exhaustion)
 
@@ -547,7 +547,7 @@ However, the $P_4$ constraint graph has a mirror symmetry $\sigma: (\text{Fx} \l
 
 #### Cultural universality — deferred
 
-No cultural instances of a $P_4$ river crossing puzzle are documented in this series. The §12.1/12.4 independent-convergence pattern cannot be evaluated at $N=4$. Whether the absence indicates cognitive-load threshold crossing (OQ-DAG.7, §12) or incomplete survey is not resolvable here.
+No cultural instances of a $P_4$ river crossing puzzle are documented in this series. The $P_3$ §12.1/§12.4 independent-convergence pattern cannot be evaluated at $N=4$. Whether the absence indicates cognitive-load threshold crossing (OQ-DAG.7, §12) or incomplete survey is not resolvable here.
 
 The $P_3$ §12.5 directionality observation (Dangerous→Middle→Safe preserved across all cultural substrates) has a structural parallel: the $P_4$ constraint graph is directed (Fx→Ch→Ca→Lf) and endpoint roles are asymmetric (Fx predates only; Lf is predated only). Whether a $P_4$ cultural instance would preserve this directionality is open.
 
