@@ -5,9 +5,9 @@ description: Every retracted claim, overclaimed scope, and removed research poin
 
 # SIRC Protocol Constraints — Retraction Log
 
-Every retracted claim, overclaimed scope, and removed research pointer. The log is the negative channel ( $C_-$) of the document — what was probed and found absent. It carries boundary information: what the constraints cannot claim constrains what they can claim.
+Every retracted claim, overclaimed scope, and removed research pointer. The log is the negative channel ( $\mathcal{B}_-$) of the document — what was probed and found absent. It carries boundary information: what the constraints cannot claim constrains what they can claim.
 
-**Structural role (SIRC vocabulary):** [SIRC_principles.md](SIRC_principles.md) is the positive channel ( $C_+$) — the invariant content that survived audit. This log is $C_-$ — the designed mutation record. Each entry is a claim that appeared to belong to $C_+$ (a foundational constraint) but was shown to be non-invariant surface: an overclaimed formalization, a loaded term, or a scope that could not be defended. Shedding these is $\mathsf{P2}$-governed behaviour, not failure. The two documents together form a complete transmission record.
+**Structural role (SIRC vocabulary):** [SIRC_principles.md](SIRC_principles.md) is the positive channel ( $\mathcal{B}_+$) — the invariant content that survived audit. This log is $\mathcal{B}_-$ — the designed mutation record. Each entry is a claim that appeared to belong to $\mathcal{B}_+$ (a foundational constraint) but was shown to be non-invariant surface: an overclaimed formalization, a loaded term, or a scope that could not be defended. Shedding these is $\mathsf{P2}$-governed behaviour, not failure. The two documents together form a complete transmission record.
 
 **Entry format:** ID · Source · Date · Audit trigger · Why retracted · Exact retracted content · What replaces it · Exploration value
 
@@ -55,6 +55,8 @@ Every retracted claim, overclaimed scope, and removed research pointer. The log 
 | [§A15](#a15) | $\mathsf{P4}$ omits cooperativity assumption for Layer 2 (soft guidance, not hard constraint; § $\mathsf{P1}$ permits discard) and phase transition regime restriction (inverse coupling holds over-constrained only; under-constrained coupling is direct) | § $\mathsf{P4}$ Definition; § $\mathsf{P4}$ OQ4.1 | 2026-04-18 | Pass 18 — Layer 2 Epistemic Contradiction / § $\mathsf{P1}$ Loophole; sub-arguments 2–3 partially hold |
 | [§A16](#a16) | $\mathsf{P1}$ Node Identity two-level distinction not explicit enough to foreclose distance-metric misreading of "topological position"; operator type equivalence not stated as functional/truth-table criterion | § $\mathsf{P1}$ Node Identity; § $\mathsf{P1}$ Definition item 3 | 2026-04-18 | Pass 20 — Topological Identity Contradiction; precision additions only |
 | [§A17](#a17) | Experimental programme forward-promised Hanoi/Latin square as next $\mathsf{P1}$ testbeds — both are undirected CSPs, structurally incompatible with $\mathsf{P1}$ directed entailment; replaced with directed inference DAGs | § Verification Asymmetry series description; progression table; `abstract.md` | 2026-09-04 | Series limit established in `P_4_river_crossing.md` §12 (F42) |
+| [§R14](#r14) | $C_\pm$ notation renamed $\mathcal{B}_\pm$ — collision with Shannon's canonical $C$ (channel capacity) | SIRC_glossary.md §Notation; SIRC_principles.md §P2, §P3; SIRC_principles_retraction.md header; README.md; constraint-graph_testbed_retraction.md | 2026-09-04 | Q-DPIMAP-1 audit — Shannon formal grounding requires collision-free notation |
+| [§R15](#r15) | `*(O)*` Rate-Distortion argument retracted — "not a current grounding" claim contradicts Q-DPIMAP-1 elevation of RDT to co-primary grounding | SIRC_principles.md §P2 Grounding `*(O)*` sub-item | 2026-09-04 | Q-DPIMAP-1 — keeping any fragment of the demotion after elevation creates adversarial self-citation |
 
 ---
 
@@ -355,7 +357,7 @@ The retraction demonstrates a general defensive principle: when a contested term
 
 ## Rejected critiques
 
-Gemini critiques assessed and rejected across all four audit passes. Recorded here as the $C_-$ of the audit process — what was probed, found invalid, and closed.
+Gemini critiques assessed and rejected across all four audit passes. Recorded here as the $\mathcal{B}_-$ of the audit process — what was probed, found invalid, and closed.
 
 | Critique | Source | Why rejected |
 |---|---|---|
@@ -1128,3 +1130,72 @@ The experimental programme claim is unchanged: it remains the only verification 
 ### Exploration value
 
 The structural disqualification of combinatorial CSPs (including Hanoi and Latin squares) as $\mathsf{P1}$ testbeds is a positive finding: it sharpens the required testbed class. Any puzzle or micro-world where the rules are undirected pair-exclusion or slot-filling constraints without premises, conclusions, or directed flow cannot be used as a $\mathsf{P1}$ testbed regardless of problem complexity. The required class is directed inference structures where nodes are propositions, edges are entailment relations, and operator types are explicitly typed (AND/OR/NOT or equivalent).
+
+---
+
+## §R14
+
+**Description:** $C_\pm$ notation renamed to $\mathcal{B}_\pm$ — Shannon channel capacity collision
+**Source:** SIRC_glossary.md §Notation; SIRC_principles.md §P2, §P3; SIRC_principles_retraction.md (header, §R2); README.md; constraint-graph_testbed_retraction.md
+**Date:** 2026-09-04
+**Retraction trigger:** Q-DPIMAP-1 audit — elevating Rate-Distortion Theory and DPI to core grounding in §P2 forces notation to be coherent with Shannon's formalism; $C$ is Shannon's canonical symbol for channel capacity
+
+### Why retracted
+
+The original notation $C_-$ / $C_+$ used $C$ as the leading character for abstract concept boundaries. Shannon's 1948 paper establishes $C$ as channel capacity — one of the most recognisable symbols in information theory. The glossary addressed this with a disclaimer (formerly L23): *"Note: $C$ in SIRC denotes the abstract Concept structure, not Shannon channel capacity $C$..."*
+
+The Q-DPIMAP-1 audit surfaced a logical trap: if Shannon's Source Coding Theorem and DPI are SIRC's formal grounding, readers validating that grounding will encounter $C_\pm$ in a document that explicitly invokes Shannon's $C$. A disclaimer cannot resolve this — it documents the collision rather than removing it. The notation must be clean in the audience context where the grounding is being checked.
+
+The rename is also a consistency check on the grounding claim itself: if $C_\pm$ could coexist with Shannon's $C$, that would be evidence Shannon is *not* the formal grounding. The decision to rename confirms that Shannon is.
+
+### Retracted content
+
+The subscript notation $C_-$ (negative boundary) and $C_+$ (positive boundary) used across:
+- SIRC_glossary.md §Notation table and definitions
+- SIRC_principles.md §P2 and §P3
+- SIRC_principles_retraction.md document header and §R2
+- README.md §P2 and §P3 descriptions
+- constraint-graph_testbed_retraction.md header and §R2 reference
+
+Also retracted: the glossary L23 collision disclaimer, which was a structural workaround rather than a solution.
+
+### What replaces it
+
+$\mathcal{B}_-$ (negative boundary) and $\mathcal{B}_+$ (positive boundary), using $\mathcal{B}$ for Boundary. $\mathcal{B}$ is unused in Shannon (1948), in the Kolmogorov complexity literature, and in all four existing SIRC $\mathcal{...}$ symbols ($\mathcal{J}$, $\mathcal{R}$, $\mathcal{S}$, $\mathcal{G}$). The subscript form ($\mathcal{B}_-$ / $\mathcal{B}_+$) is preserved to maintain visual contrast with the superscript testbed notation ($\mathcal{J}^-$ / $\mathcal{J}^+$).
+
+The glossary L23 disclaimer is replaced with: *"Note: $\mathcal{B}_\pm$ (abstract boundary notation) does not collide with Shannon channel capacity $C$ or Kolmogorov complexity $C(x)$. $\mathcal{B}$ is unused in both formalisms."*
+
+### Exploration value
+
+The rename forced a definitive answer to an implicit question that had been deferred: is Shannon's formalism SIRC's formal grounding, or a structural analogy? The logical dilemma (if Shannon IS the grounding, $C_\pm$ collides; if Shannon is NOT the grounding, the notation is moot) makes the rename a commitment device. Choosing $\mathcal{B}_\pm$ is the decision that Shannon is the grounding and that the notation must be coherent for that audience. This decision should be reflected in the Q-DPIMAP-1 §P2 repair at source commit time.
+
+---
+
+## §R15
+
+**Description:** `*(O)*` Rate-Distortion argument retracted — "not a current grounding" claim contradicts Q-DPIMAP-1 elevation of RDT to co-primary grounding
+**Source:** SIRC_principles.md §P2 Grounding — `*(O)*` sub-item (Rate-Distortion structural analogy)
+**Date:** 2026-09-04
+**Retraction trigger:** Q-DPIMAP-1 — elevating RDT to co-primary grounding; any surviving "not a current grounding" fragment creates adversarial self-citation
+
+### Why retracted
+
+When Q-DPIMAP-1 elevates Rate-Distortion Theory from structural analogy to co-primary grounding alongside DPI, the `*(O)*` sub-item's explicit claim — "Rate-Distortion Theory is a candidate formal framework for OQ2.1, not a current grounding" — directly contradicts the elevation. An adversary quoting that sentence after the elevation can argue the authors admitted RDT is only a candidate. A surviving disclaimer cannot be read as provisional when the same document also commits to RDT as core grounding. There is no partial elevation: the retraction is a required commitment.
+
+Note: §R7 retracted the original overclaim of RDT as a *formal bridge* (the P3 constraint-packet mapping) on grounds that the mapping lacked a defined distortion metric. §R15 is distinct — it retracts the subsequent demotion, which correctly diagnosed §R7's problem but overcorrected: "no quantitative metric → no grounding at all." The Q-DPIMAP-1 repair resolves this by splitting the question. RDT grounds the *qualitative* necessity of loss ($D > 0$ via $R(0) = \infty$) without requiring a distortion metric; the *quantitative* curve is OQ2.1. This reading was not available when §R7 was written because the continuous-source argument had not yet been identified as the mechanism that does not require a metric.
+
+### Retracted content
+
+> `  - *Argument (structural analogy, rate-distortion theory):* *(O)* Rate-Distortion Theory (Shannon, 1959) characterises the tradeoff space above that floor — the minimum transmission rate required to reconstruct a source within a given distortion bound. The structural mapping to SIRC is visible: Rate corresponds to constraint packet strictness; Distortion corresponds to surface content mutation. This analogy becomes a formal bridge only if a quantitative distortion metric over surface content is defined — which SIRC does not currently provide. Rate-Distortion Theory is a candidate formal framework for OQ2.1, not a current grounding. $DPI$ establishes that loss exists; Rate-Distortion is where that formalization should eventually land.`
+
+### What replaces it
+
+Three items in the restructured §P2 Grounding block (Q-DPIMAP-1):
+
+- `*Argument (continuous-source rate bottleneck):*` — grounds qualitative loss necessity in $R(0) = \lim_{D \to 0} R(D) = \infty$ for continuous sources; requires no distortion metric.
+- `*Argument (discrete-source bottleneck):*` — grounds loss for discrete heterogeneous sources in the finite-channel condition ($I(S_{\text{send}}; Y) \le C < H(S_{\text{send}})$).
+- `*Scope (metric status):*` — preserves the OQ2.1 deferral at the correct level: RDT grounds the qualitative necessity of loss; the quantitative distortion-rate curve over specific surface embeddings requires an empirical metric SIRC does not yet provide.
+
+### Exploration value
+
+The §R7 → §R15 arc is a recalibration pattern: §R7 demoted RDT too far in response to a valid precision catch (missing distortion metric), and §R15 restores it to the right epistemic level. The correct level — qualitative necessity is grounded; quantitative curve is open — was not visible when §R7 was written because the continuous-source argument ($R(0) = \infty$ requires no metric) had not yet been identified. Once identified, it resolves the tension without reopening the §R7 problem: the metric deferral is intact in `*Scope (metric status):*`, and the grounding claim is narrowed to what the continuous-source argument actually delivers.
